@@ -28,7 +28,7 @@ const project = {
     title: "网关管理",
     login: {
       "title": "网关管理",
-      "desc": "项目由s2驱动！"
+      "desc": ""
     },
     head: {
       logo:{
