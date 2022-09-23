@@ -1,37 +1,39 @@
-# sipsd-sso-s2-oauth2_gateway-web
-> 基于uc的前端项目，由s2前端框架进行构建。
+# v2x1
+> s2 2.x 单体项目
 
 [s2在线帮助文档](http://58.210.9.133/iplatform/pldoc)
 ## 初始化
-* 安装s2
-```
-npm i -g @dpark/s2 --registry http://192.168.126.25/npm/
-```
 * 项目初始化
 ```
-npm run pre
+yarn install 
 ```
 
 ### 相关配置
 * 配置文件：`src\project.js`
-* 路由：`src\views\index.js`
+* 路由：`src\router\index.js`
+* 状态：`src\store\index.js`
 
 ### 运行
 * 开发模式
 ```
-npm run dev
+npm run serve
 ```
 * 代理模式
 ```
 npm run proxy
 ```
 
-### 编译
-* 打包成模块
-```
-npm run build:module
-```
-* 打包成完整项目
+### 打包
 ```
 npm run build
 ```
+### 标准化检查
+* js+vue 检查
+```
+npm run lint
+```
+* css 检查
+```
+npm run lint:style
+```
+
