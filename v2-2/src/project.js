@@ -1,16 +1,19 @@
 const project = {
-  namespace: 'v2x1',
+  namespace: 'v2-2',
   mainSys:true,
   index:10,
   variable: {
     appid: process.env.VUE_APP_appid,
     appName: process.env.VUE_APP_appName,
+    tokenKey: process.env.VUE_APP_tokenKey,
     baseApi: process.env.VUE_APP_baseApi,
+    ssoApi: process.env.VUE_APP_ssoApi,
+    ssoAuth: process.env.VUE_APP_ssoAuth
   },
   redirect: {
-    index: '/v2x1/route',
-    login:'/v2x1/login',
-    '404':'/v2x1/404'
+    index: '/oauth2_gateway/route',
+    login:'/oauth2_gateway/login',
+    '404':'/oauth2_gateway/404'
   },
   style: {
     theme: 'vue-admin',
