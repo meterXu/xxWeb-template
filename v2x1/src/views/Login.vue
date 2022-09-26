@@ -21,6 +21,9 @@ export default {
     login(valid){
       if(valid){
         this.$ls.set(types.ACCESS_TOKEN,'xxxxxx')
+        this.$ls.set(types.USER_INFO,JSON.stringify({
+          realname:'管理员'
+        }))
         this.$router.push({name:'Index'})
       }
     }
