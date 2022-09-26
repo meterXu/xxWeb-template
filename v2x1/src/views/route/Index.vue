@@ -125,13 +125,7 @@ export default {
     return {
       dialogTitle:null,
       dialogVisible:false,
-      formData:{
-        routeName:null,
-        routeId:null,
-        predicates:null,
-        uri:null,
-        delFlag:null
-      }
+      formData:{}
     }
   },
   computed: {
@@ -144,7 +138,7 @@ export default {
     //分页查询后得到的数据赋值
     getList(page) {
       let data = {
-        'records': [
+        records: [
           {
             'id': 11062,
             'routeId': 'sipsd-upms-biz',
@@ -176,14 +170,9 @@ export default {
             'delFlag': 0
           }
         ],
-        'total': 2,
-        'size': 10,
-        'current': 1,
-        'orders': [],
-        'optimizeCountSql': true,
-        'hitCount': false,
-        'searchCount': true,
-        'pages': 1
+        total: 2,
+        size: 10,
+        current: 1
       }
       this.tableData = data.records
       this.page.currentPage = data.current
@@ -192,10 +181,18 @@ export default {
     },
     handleAdd() {
       this.dialogTitle='新增'
+      this.formData = {
+        routeName:null,
+        routeId:null,
+        predicates:null,
+        uri:null,
+        delFlag:null
+      }
       this.dialogVisible = true
     },
-    handleEdit() {
+    handleEdit(row) {
       this.dialogTitle='编辑'
+      this.formData = Object.assign({},row)
       this.dialogVisible = true
     },
     handleDelete(scope) {
