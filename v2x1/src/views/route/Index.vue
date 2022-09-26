@@ -118,7 +118,7 @@ import { mapGetters } from 'vuex'
 import RouteEdit from './module/RouteEdit.vue';
 import mixin from '@/mixins/mixin';
 export default {
-  name: 'dict',
+  name: 'routeList',
   components: { RouteEdit },
   mixins:[mixin],
   data() {

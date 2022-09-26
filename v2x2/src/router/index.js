@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Login from '../views/Login.vue'
 import Router from 'vue-router';
 import routeIndex from '../views/route/Index';
+import blankWhiteIpIndex from '../views/blankWhiteIp/Index';
+import resourceIndex from '../views/resources/Index';
 import MyNotFound from '../views/MyNotFound';
 import Index from '../views/Index';
 Vue.use(Router);
@@ -27,6 +29,16 @@ let normalRoutes = [
         path: '/oauth2_gateway/route',
         name: routeIndex.name,
         component: routeIndex
+      },
+      {
+        path: '/oauth2_gateway/blankWhiteIpList',
+        name: blankWhiteIpIndex.name,
+        component: blankWhiteIpIndex
+      },
+      {
+        path: '/oauth2_gateway/resource',
+        name: resourceIndex.name,
+        component: resourceIndex
       }]
   }
 ]

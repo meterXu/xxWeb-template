@@ -69,7 +69,7 @@ const project = {
       }
     },
     sideMenu: {
-      title: '网关管理',
+      title: '{{projectName}}',
       width: '200px',
       logo:{
         show: true,

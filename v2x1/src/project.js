@@ -8,9 +8,9 @@ const project = {
     baseApi: process.env.VUE_APP_baseApi,
   },
   redirect: {
-    index: '/oauth2_gateway/route',
-    login:'/oauth2_gateway/login',
-    '404':'/oauth2_gateway/404'
+    index: '/v2x1/route',
+    login:'/v2x1/login',
+    '404':'/v2x1/404'
   },
   style: {
     theme: 'vue-admin',
@@ -28,8 +28,8 @@ const project = {
     favicon: './static/dpark/logo_sipsd_favicon.png',
     title: '{{projectName}}',
     login: {
-      'title': '{{projectName}}',
-      'desc': ''
+      title: '{{projectName}}',
+      desc: ''
     },
     head: {
       logo:{
@@ -37,22 +37,22 @@ const project = {
       },
       title: {
         show: true,
-        'desktop': '欢迎使用{{projectName}}',
-        'mobile': '{{projectName}}'
+        desktop: '欢迎使用{{projectName}}',
+        mobile: '{{projectName}}'
       },
       breadcrumb: {
         show: true,
       },
       searchMenu: {
-        'show': true
+        show: true
       },
       fullscreen: {
         show: true,
       },
       helper: {
-        'show': false,
-        'href': 'http://192.168.126.25/iplatform/pldoc/',
-        'target': '_blank'
+        show: false,
+        href: 'http://58.210.9.133/iplatform/geekdoc/docs/wow/wow-1delpeiiudksc',
+        target: '_blank'
       },
       user: {
         show: true,
