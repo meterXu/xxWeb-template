@@ -22,7 +22,7 @@ const project = {
     autoHideHeader: false,
   },
   config: {
-    logo: './static/dpark/logo_sipsd.png',
+    logo: './static/dpark/logo_sipsd_white.png',
     darkLogo: './static/dpark/logo_sipsd_white.png',
     favicon: './static/dpark/logo_sipsd_favicon.png',
     title: '网关管理',
