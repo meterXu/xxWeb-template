@@ -1,5 +1,5 @@
 const project = {
-  namespace: 'oauth2_gateway',
+  namespace: '{{ namespace }}',
   mainSys:true,
   index:10,
   variable: {
@@ -25,9 +25,9 @@ const project = {
     logo: './static/dpark/logo_sipsd_white.png',
     darkLogo: './static/dpark/logo_sipsd_white.png',
     favicon: './static/dpark/logo_sipsd_favicon.png',
-    title: '网关管理',
+    title: '{{projectName}}',
     login: {
-      'title': '网关管理',
+      'title': '{{projectName}}',
       'desc': ''
     },
     head: {
@@ -36,8 +36,8 @@ const project = {
       },
       title: {
         show: true,
-        'desktop': '欢迎使用网关管理',
-        'mobile': '网关管理'
+        'desktop': '欢迎使用{{projectName}}',
+        'mobile': '{{projectName}}'
       },
       breadcrumb: {
         show: true,

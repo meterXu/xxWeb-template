@@ -12,7 +12,7 @@ Vue.use(DoIcon)
 Vue.prototype.$project = window.project
 Vue.prototype.$ls = new util.ls(window.project)
 filter(router,Vue.prototype.$project)
-document.title = Vue.prototype.$project.variable.appName
+document.title = Vue.prototype.$project.config.title
 document.querySelector('link[rel="icon"]').href = Vue.prototype.$project.config.favicon
 Vue.use(element, {
   size: 'medium',
