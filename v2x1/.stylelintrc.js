@@ -1,5 +1,12 @@
 module.exports = {
-    "rules": {
+    defaultSeverity: 'error',
+    overrides: [
+        {
+            files: ['**/*.(html|vue)'],
+            customSyntax: 'postcss-html'
+        }
+    ],
+    rules: {
         "value-keyword-case": "lower",
         "indentation":2,
         "comment-empty-line-before":[

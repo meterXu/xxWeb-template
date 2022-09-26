@@ -9,7 +9,4 @@ export default {
 </script>
 
 <style scoped>
-.xx {
-  color: #000000;
-}
 </style>

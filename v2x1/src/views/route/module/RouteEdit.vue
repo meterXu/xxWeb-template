@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style scoped>
-.sel-suffix{
+.sel-suffix {
   text-align: center;
 }
 </style>

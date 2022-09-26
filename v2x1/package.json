@@ -19,6 +19,7 @@
     "crypto-js": "^4.1.1",
     "element-ui": "^2.15.6",
     "lodash.pick": "^4.4.0",
+    "postcss-html": "^1.5.0",
     "vue": "^2.6.11",
     "vue-router": "^3.5.4",
     "vuex": "^3.5.1"
@@ -37,6 +38,7 @@
     "rxjs-compat": "^6.5.4",
     "stylelint": "^14.12.1",
     "stylelint-config-standard": "^28.0.0",
+    "stylelint-webpack-plugin": "^3.3.0",
     "vue-template-compiler": "^2.6.11",
     "webpack-bundle-analyzer": "^4.5.0"
   },

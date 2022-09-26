@@ -1,5 +1,6 @@
 const fs = require('fs')
 const project = require('./src/project')
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 fs.writeFileSync('./public/project.js','window.project='+JSON.stringify(project,null,2),{'flag':'w'})
 module.exports = {
   publicPath:'./',

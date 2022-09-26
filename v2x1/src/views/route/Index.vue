@@ -11,10 +11,10 @@
         </el-form-item>
       </el-form>
     </el-card>
-    <el-card class="box-card" style="margin-top: 8px">
+    <el-card class="box-card" style="margin-top: 8px;">
       <!--  查询  -->
 
-      <div style="padding-bottom: 5px">
+      <div style="padding-bottom: 5px;">
         <el-button v-if="allPerms.add" type="primary" icon="el-icon-plus" @click="handleAdd">新增</el-button>
       </div>
       <!--  表格  -->
@@ -23,7 +23,7 @@
             :data="tableData"
             border
             stripe header-cell-class-name="my-head"
-            style="width: 100%">
+            style="width: 100%;">
           <el-table-column
               fixed
               type="index"
@@ -85,7 +85,7 @@
               width="240">
             <template slot-scope="scope">
               <el-button v-if="allPerms.edit" @click="handleEdit(scope.row)" type="text" icon="el-icon-edit" size="small">编辑</el-button>
-              <el-popconfirm v-if="allPerms.delete" style="padding-left: 8px"
+              <el-popconfirm v-if="allPerms.delete" style="padding-left: 8px;"
                              title="确定删除吗？"
                              @confirm="handleDelete(scope.row)"
               >
@@ -96,7 +96,7 @@
         </el-table>
       </div>
       <!--  分页  -->
-      <div style="float: right;padding-bottom: 20px">
+      <div style="float: right;padding-bottom: 20px;">
         <el-pagination
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
@@ -205,7 +205,6 @@ export default {
     }
   },
   mounted() {
-
   }
 }
 </script>
