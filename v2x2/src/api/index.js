@@ -1,31 +1,24 @@
+import {util} from '@dpark/s2-xxweb-utils'
+import {getAction} from './manage'
 export function queryPermissionsByUser() {
   return new Promise((resolve, reject) => {
-    let permission = {}
-    permission.menu = [
-      {
-        path: '/oauth2_gateway',
-        meta:{
-          title:'网关管理',
-          icon: {icon:'DoIncoming',conf:{fill:'currentColor'}},
-        },
-        children: [
-          {
-            path: '/oauth2_gateway/route',
-            meta:{
-              title: '动态路由',
-              icon:{icon:'DoEqualizer',conf:{fill:'currentColor'}}
-            }
-          }
-        ]
-      }
-    ]
-    permission.allPerms = {
-      add:true,
-      search:true,
-      edit:true,
-      delete:true
-    }
-
-    resolve(permission)
+    let project = window.project
+    const params = { appId: project.variable.appid}
+    return new Promise((resolve, reject) => {
+      getAction('/app/appinfomenu', params).then(response => {
+        if (response.data) {
+          let menuList = {}
+          menuList.menu = util.oAuthMenu2S2(response.data,customIcon)
+          menuList.allAuth = []
+          menuList.allPerms = []
+          menuList.auth = []
+          resolve(menuList)
+        }else{
+          reject('获取权限失败！')
+        }
+      }).catch(err => {
+        reject(err)
+      })
+    })
   })
 }

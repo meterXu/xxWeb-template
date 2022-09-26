@@ -6,6 +6,8 @@ const project = {
     appid: process.env.VUE_APP_appid,
     appName: process.env.VUE_APP_appName,
     baseApi: process.env.VUE_APP_baseApi,
+    ssoApi: process.env.VUE_APP_ssoApi,
+    ssoAuth: process.env.VUE_APP_ssoAuth,
   },
   redirect: {
     index: '/oauth2_gateway/route',

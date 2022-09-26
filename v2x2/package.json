@@ -1,5 +1,5 @@
 {
-  "name": "{{projectName}}",
+  "name": "v2x2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
     "proxy": "vue-cli-service serve --mode proxy",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lint:css": "stylelint **/*.{html,vue,css}",
+    "lint:style": "stylelint **/*.{html,vue,css}",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
