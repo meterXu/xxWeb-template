@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import {types,util} from "@dpark/s2-xxweb-utils";
-import {queryPermissionsByUser} from "../api";
+import {types,util} from '@dpark/s2-xxweb-utils';
+import {queryPermissionsByUser} from '../api';
 
 export default {
-  name: "Index",
+  name: 'Index',
   data() {
     return {
       project: this.$project,
@@ -27,9 +27,9 @@ export default {
   methods:{
     dropdownMenuClick(command){
       switch (command){
-        case 'exitSystem':{
-          util.logOut(this)
-        }
+      case 'exitSystem':{
+        util.logOut(this)
+      }
       }
     }
   },

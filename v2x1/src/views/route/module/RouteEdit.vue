@@ -43,7 +43,7 @@
 <script>
 
 export default {
-  name: "RouteEdit",
+  name: 'RouteEdit',
   props:['visible','title','form'],
   data() {
     return {

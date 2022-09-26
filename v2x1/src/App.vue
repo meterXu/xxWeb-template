@@ -4,10 +4,12 @@
 
 <script>
 export default {
-  name: "App"
+  name: 'App'
 }
 </script>
 
 <style scoped>
-
+.xx {
+  color: #000000;
+}
 </style>

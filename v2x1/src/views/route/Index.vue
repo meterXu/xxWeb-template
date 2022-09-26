@@ -115,8 +115,8 @@
 <script>
 
 import { mapGetters } from 'vuex'
-import RouteEdit from "./module/RouteEdit.vue";
-import mixin from "@/mixins/mixin";
+import RouteEdit from './module/RouteEdit.vue';
+import mixin from '@/mixins/mixin';
 export default {
   name: 'dict',
   components: { RouteEdit },
@@ -138,46 +138,46 @@ export default {
     //分页查询后得到的数据赋值
     getList(page) {
       let data = {
-        "records": [
+        'records': [
           {
-            "id": 11062,
-            "routeId": "sipsd-upms-biz",
-            "routeName": "通用权限模块",
-            "predicates": "/admin/**",
-            "filters": "[{\"args\":{\"key-resolver\":\"#{@remoteAddrKeyResolver}\",\"redis-rate-limiter.requestedTokens\":\"1\",\"redis-rate-limiter.burstCapacity\":\"60\",\"redis-rate-limiter.replenishRate\":\"60\"},\"name\":\"SipsdRequestRateLimiter\"}]",
-            "keyResolver": null,
-            "isOpen": 0,
-            "rateLimitString": null,
-            "uri": "lb://sipsd-upms-biz",
-            "sort": 0,
-            "createTime": 1646587618000,
-            "updateTime": null,
-            "delFlag": 0
+            'id': 11062,
+            'routeId': 'sipsd-upms-biz',
+            'routeName': '通用权限模块',
+            'predicates': '/admin/**',
+            'filters': '[{"args":{"key-resolver":"#{@remoteAddrKeyResolver}","redis-rate-limiter.requestedTokens":"1","redis-rate-limiter.burstCapacity":"60","redis-rate-limiter.replenishRate":"60"},"name":"SipsdRequestRateLimiter"}]',
+            'keyResolver': null,
+            'isOpen': 0,
+            'rateLimitString': null,
+            'uri': 'lb://sipsd-upms-biz',
+            'sort': 0,
+            'createTime': 1646587618000,
+            'updateTime': null,
+            'delFlag': 0
           },
           {
-            "id": 11063,
-            "routeId": "sipsd-auth-server",
-            "routeName": "认证中心",
-            "predicates": "/auth/**",
-            "filters": "[]",
-            "keyResolver": null,
-            "isOpen": 0,
-            "rateLimitString": null,
-            "uri": "lb://sipsd-auth-server",
-            "sort": 0,
-            "createTime": 1646587618000,
-            "updateTime": null,
-            "delFlag": 0
+            'id': 11063,
+            'routeId': 'sipsd-auth-server',
+            'routeName': '认证中心',
+            'predicates': '/auth/**',
+            'filters': '[]',
+            'keyResolver': null,
+            'isOpen': 0,
+            'rateLimitString': null,
+            'uri': 'lb://sipsd-auth-server',
+            'sort': 0,
+            'createTime': 1646587618000,
+            'updateTime': null,
+            'delFlag': 0
           }
         ],
-        "total": 2,
-        "size": 10,
-        "current": 1,
-        "orders": [],
-        "optimizeCountSql": true,
-        "hitCount": false,
-        "searchCount": true,
-        "pages": 1
+        'total': 2,
+        'size': 10,
+        'current': 1,
+        'orders': [],
+        'optimizeCountSql': true,
+        'hitCount': false,
+        'searchCount': true,
+        'pages': 1
       }
       this.tableData = data.records
       this.page.currentPage = data.current
@@ -185,11 +185,11 @@ export default {
       this.page.total  = data.total
     },
     handleAdd() {
-      this.dialogTitle="新增"
+      this.dialogTitle='新增'
       this.dialogVisible = true
     },
     handleEdit() {
-      this.dialogTitle="编辑"
+      this.dialogTitle='编辑'
       this.dialogVisible = true
     },
     handleDelete(scope) {

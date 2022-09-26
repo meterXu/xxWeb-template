@@ -8,13 +8,13 @@ module.exports = {
   chainWebpack: (config) => {
     if (process.env.npm_config_report) {
       config
-          .plugin('webpack-bundle-analyzer')
-          .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
+        .plugin('webpack-bundle-analyzer')
+        .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
     }
   },
   configureWebpack:  config => {
     config.entry = {
-      main: ["./src/main.js"]
+      main: ['./src/main.js']
     }
     if (process.env.NODE_ENV === 'production') {
       config.optimization.runtimeChunk = false
