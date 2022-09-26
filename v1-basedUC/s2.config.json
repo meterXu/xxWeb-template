@@ -1,0 +1,8 @@
+{
+  "{{ namespace }}": {
+    "immediately": true,
+    "js":[
+      "http://localhost:8081/{{ namespace }}.js"
+    ]
+  }
+}

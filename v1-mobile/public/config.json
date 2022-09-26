@@ -1,0 +1,10 @@
+{
+  "baseApi":"http://<ip>:<port>/<asset>",
+  "namespace":"{{namespace}}",
+  "appid": "<请配置>",
+  "ssoApi": "<请配置>",
+  "baseApi": "<请配置>",
+  "ssoAuth":"http://dev.dpark.com.cn/ifp/#/sso",
+  "uploadUrl": "http://dev.dpark.com.cn/dpark-minio-api",
+  "accessTokenTime":3600000
+}
