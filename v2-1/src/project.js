@@ -1,5 +1,5 @@
 const project = {
-  namespace: 'v2-1',
+  namespace: '{{ namespace }}',
   mainSys:true,
   index:10,
   variable: {
@@ -8,9 +8,9 @@ const project = {
     baseApi: process.env.VUE_APP_baseApi,
   },
   redirect: {
-    index: '/v2-1/route',
-    login:'/v2-1/login',
-    '404':'/v2-1/404'
+    index: '/{{ namespace }}/route',
+    login:'/{{ namespace }}/login',
+    '404':'/{{ namespace }}/404'
   },
   style: {
     theme: 'vue-admin',

@@ -8,12 +8,12 @@ Vue.use(Router);
 
 let normalRoutes = [
   {
-    'path': '/oauth2_gateway/login',
+    'path': '/{{ namespace }}/login',
     'name': Login.name,
     'component': Login
   },
   {
-    'path': '/oauth2_gateway/404',
+    'path': '/{{ namespace }}/404',
     'name': MyNotFound.name,
     'component': MyNotFound
   },
@@ -21,10 +21,10 @@ let normalRoutes = [
     path: '/',
     component: Index,
     name: Index.name,
-    redirect:'/oauth2_gateway/route',
+    redirect:'/{{ namespace }}/route',
     children:[
       {
-        path: '/oauth2_gateway/route',
+        path: '/{{ namespace }}/route',
         name: routeIndex.name,
         component: routeIndex
       }]
