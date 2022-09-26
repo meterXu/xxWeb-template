@@ -2,7 +2,8 @@
   <el-dialog
       :title="title"
       :visible.sync="visible"
-      width="36%">
+      width="36%"
+      @close="onCancel">
     <el-form :model="form" :rules="rules" ref="ruleForm" label-width="140px" class="demo-ruleForm">
       <el-form-item label="网关名称：" prop="routeName">
         <el-col :span="21">
@@ -27,8 +28,8 @@
       <el-form-item label="是否生效：" prop="delFlag">
         <el-col :span="21">
           <el-radio-group v-model="form.delFlag">
-            <el-radio label="0">是</el-radio>
-            <el-radio label="1">否</el-radio>
+            <el-radio :label="0">是</el-radio>
+            <el-radio :label="1">否</el-radio>
           </el-radio-group>
         </el-col>
       </el-form-item>
@@ -45,6 +46,10 @@
 export default {
   name: 'RouteEdit',
   props:['visible','title','form'],
+  model:{
+    prop:'visible',
+    event:'change'
+  },
   data() {
     return {
       rules: {
@@ -70,17 +75,19 @@ export default {
   },
   methods: {
     onCancel() {
-      this.visible = false
+      this.$refs.ruleForm.resetFields()
+      this.$emit('change',false)
     },
     handleSuccess(){
-
+      this.$refs.ruleForm.validate(valid=>{
+        if(valid){
+          this.$emit('change',false)
+        }
+      })
     }
   }
 }
 </script>
 
 <style scoped>
-.sel-suffix {
-  text-align: center;
-}
 </style>

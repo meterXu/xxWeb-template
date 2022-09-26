@@ -107,7 +107,7 @@
             :total="page.total">
         </el-pagination>
       </div>
-      <RouteEdit :title="dialogTitle" :visible="dialogVisible" :form="formData" @close="close"></RouteEdit>
+      <RouteEdit :title="dialogTitle" v-model="dialogVisible" :form="formData" @close="close"></RouteEdit>
     </el-card>
   </div>
 </template>
@@ -125,7 +125,13 @@ export default {
     return {
       dialogTitle:null,
       dialogVisible:false,
-      formData:{}
+      formData:{
+        routeName:null,
+        routeId:null,
+        predicates:null,
+        uri:null,
+        delFlag:null
+      }
     }
   },
   computed: {
