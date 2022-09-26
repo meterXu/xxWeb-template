@@ -1,5 +1,5 @@
 const project = {
-  namespace: '{{ namespace }}',
+  namespace: 'v2x1',
   mainSys:true,
   index:10,
   variable: {
@@ -66,7 +66,7 @@ const project = {
       }
     },
     sideMenu: {
-      title: '网关管理',
+      title: '{{projectName}}',
       width: '200px',
       logo:{
         show: true,
@@ -87,36 +87,29 @@ const project = {
       icon: true,
     },
     footer: {
-      'links': [{
-        'name': '帮助',
-        'href': 'javascript:;',
-        'target': '_self'
+      show:true,
+      links: [{
+        name: '帮助',
+        href: 'javascript:;',
+        target: '_self'
       }, {
-        'name': '隐私',
-        'href': 'javascript:;',
-        'target': '_self'
+        name: '隐私',
+        href: 'javascript:;',
+        target: '_self'
       },
       {
-        'name': '条款',
-        'href': 'javascript:;',
-        'target': '_self'
+        name: '条款',
+        href: 'javascript:;',
+        target: '_self'
       }],
-      'copyright': {
-        'content': '苏州工业园园区测绘地理信息有限公司',
-        'year': '2020',
-        'href': 'http://www.dpark.com.cn',
-        'target': '_blank'
+      copyright: {
+        content: '苏州工业园区测绘地理信息有限公司',
+        year: '2002-2017',
+        href: 'http://www.dpark.com.cn',
+        target: '_blank'
       }
     },
-    'plugins': {
-      'changeSystem': {
-        'enable': true
-      }
-    },
-    'browserFilter': {
-      'chrome': 65,
-      'firefox': 53
-    }
+    browserFilter: {}
   }
 }
 

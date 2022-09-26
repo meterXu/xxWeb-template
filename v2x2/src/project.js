@@ -1,13 +1,14 @@
 const project = {
-  namespace: '{{ namespace }}',
+  namespace: 'v2x2',
   mainSys:true,
   index:10,
   variable: {
     appid: process.env.VUE_APP_appid,
     appName: process.env.VUE_APP_appName,
+    tokenKey: process.env.VUE_APP_tokenKey,
     baseApi: process.env.VUE_APP_baseApi,
     ssoApi: process.env.VUE_APP_ssoApi,
-    ssoAuth: process.env.VUE_APP_ssoAuth,
+    ssoAuth: process.env.VUE_APP_ssoAuth
   },
   redirect: {
     index: '/oauth2_gateway/route',
@@ -30,8 +31,8 @@ const project = {
     favicon: './static/dpark/logo_sipsd_favicon.png',
     title: '{{projectName}}',
     login: {
-      'title': '{{projectName}}',
-      'desc': ''
+      title: '{{projectName}}',
+      desc: ''
     },
     head: {
       logo:{
@@ -39,22 +40,22 @@ const project = {
       },
       title: {
         show: true,
-        'desktop': '欢迎使用{{projectName}}',
-        'mobile': '{{projectName}}'
+        desktop: '欢迎使用{{projectName}}',
+        mobile: '{{projectName}}'
       },
       breadcrumb: {
         show: true,
       },
       searchMenu: {
-        'show': true
+        show: true
       },
       fullscreen: {
         show: true,
       },
       helper: {
-        'show': false,
-        'href': 'http://192.168.126.25/iplatform/pldoc/',
-        'target': '_blank'
+        show: false,
+        href: 'http://58.210.9.133/iplatform/geekdoc/docs/wow/wow-1delpeiiudksc',
+        target: '_blank'
       },
       user: {
         show: true,
@@ -89,36 +90,29 @@ const project = {
       icon: true,
     },
     footer: {
-      'links': [{
-        'name': '帮助',
-        'href': 'javascript:;',
-        'target': '_self'
+      show:true,
+      links: [{
+        name: '帮助',
+        href: 'javascript:;',
+        target: '_self'
       }, {
-        'name': '隐私',
-        'href': 'javascript:;',
-        'target': '_self'
+        name: '隐私',
+        href: 'javascript:;',
+        target: '_self'
       },
       {
-        'name': '条款',
-        'href': 'javascript:;',
-        'target': '_self'
+        name: '条款',
+        href: 'javascript:;',
+        target: '_self'
       }],
-      'copyright': {
-        'content': '苏州工业园园区测绘地理信息有限公司',
-        'year': '2020',
-        'href': 'http://www.dpark.com.cn',
-        'target': '_blank'
+      copyright: {
+        content: '苏州工业园区测绘地理信息有限公司',
+        year: '2002-2017',
+        href: 'http://www.dpark.com.cn',
+        target: '_blank'
       }
     },
-    'plugins': {
-      'changeSystem': {
-        'enable': true
-      }
-    },
-    'browserFilter': {
-      'chrome': 65,
-      'firefox': 53
-    }
+    browserFilter: {}
   }
 }
 
