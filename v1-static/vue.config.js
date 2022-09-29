@@ -16,11 +16,11 @@ module.exports = {
     if (process.env.NODE_ENV === 'production') {
       config.optimization.runtimeChunk = false
       config.optimization.splitChunks = {
-          cacheGroups: {
-              default: false
-          }
+        cacheGroups: {
+          default: false
+        }
       }
-  }
+    }
     return {
       output: {
         library: namespace,
