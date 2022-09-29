@@ -12,6 +12,9 @@
     "build:module" : "s2 mod",
     "package":"vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "lint:fix": "vue-cli-service lint --fix",
+    "lint:style": "stylelint **/*.{html,vue,css}",
+    "lint:style:fix": "stylelint **/*.{html,vue,css} --fix",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {

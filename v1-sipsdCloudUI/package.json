@@ -6,7 +6,10 @@
     "pre": "yarn install",
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build --mode production",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lint:fix": "vue-cli-service lint --fix",
+    "lint:style": "stylelint **/*.{html,vue,css}",
+    "lint:style:fix": "stylelint **/*.{html,vue,css} --fix"
   },
   "dependencies": {
     "@dpark/icon": "^1.0.22",
