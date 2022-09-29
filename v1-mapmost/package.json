@@ -41,7 +41,10 @@
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "rxjs-compat": "^6.5.4",
-    "vue-template-compiler": "2.6.14"
+    "vue-template-compiler": "2.6.14",
+    "stylelint": "^14.12.1",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-webpack-plugin": "^3.3.0"
   },
   "eslintConfig": {
     "rules": {

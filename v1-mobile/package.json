@@ -45,7 +45,10 @@
     "less-loader": "^7.0.2",
     "postcss-px2rem": "^0.3.0",
     "vue-cli-plugin-cube-ui": "~0.2.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "stylelint": "^14.12.1",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-webpack-plugin": "^3.3.0"
   },
   "eslintConfig": {
     "root": true,
