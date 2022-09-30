@@ -1,5 +1,5 @@
 const project = {
-  namespace: '{{ namespace }}',
+  namespace: 'v2_2',
   mainSys:true,
   index:10,
   variable: {
