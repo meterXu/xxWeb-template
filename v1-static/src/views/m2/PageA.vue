@@ -109,7 +109,7 @@
   </a-card>
 </template>
 
-  <script>
+<script>
 
 import { JeecgListMixin } from '../../mixins/JeecgListMixin'
 import PageAModal from './modules/PageAModal'

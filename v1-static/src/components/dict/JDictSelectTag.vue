@@ -20,82 +20,81 @@
 </template>
 
 <script>
-  import { ajaxGetDictItems } from '../../api'
+import { ajaxGetDictItems } from '../../api'
 
-  export default {
-    name: 'JDictSelectTag',
-    props: {
-      dictCode: String,
-      placeholder: String,
-      triggerChange: Boolean,
-      disabled: Boolean,
-      value: {
-        type: [String, Number],
-        default: null
-      },
-      type: String
+export default {
+  name: 'JDictSelectTag',
+  props: {
+    dictCode: String,
+    placeholder: String,
+    triggerChange: Boolean,
+    disabled: Boolean,
+    value: {
+      type: [String, Number],
+      default: null
     },
-    data() {
-      return {
-        dictOptions: [],
-        tagType: ''
-      }
-    },
-    watch: {
-      dictCode: {
-        immediate: true,
-        handler() {
-          this.initDictData()
-        }
-      }
-    },
-    created() {
-      // console.log(this.dictCode);
-      if (!this.type || this.type === 'list') {
-        this.tagType = 'select'
-      } else {
-        this.tagType = this.type
-      }
-      // 获取字典数据
-      // this.initDictData();
-    },
-    computed: {
-      getValueSting() {
-        return this.value !== null ? this.value.toString() : null
-      }
-    },
-    methods: {
-      initDictData() {
-        // 根据字典Code, 初始化字典数组
-        ajaxGetDictItems(this.dictCode, null).then((res) => {
-          if (res.success) {
-//                console.log(res.result);
-            this.dictOptions = res.result
-          }
-        })
-      },
-      handleInput(e) {
-        let val
-        if (this.tagType == 'radio') {
-          val = e.target.value
-        } else {
-          val = e
-        }
-        if (this.triggerChange) {
-          console.log(val)
-          this.$emit('change', val)
-        } else {
-          this.$emit('input', val)
-        }
-      },
-      setCurrentDictOptions(dictOptions) {
-        this.dictOptions = dictOptions
-      },
-      getCurrentDictOptions() {
-        return this.dictOptions
+    type: String
+  },
+  data() {
+    return {
+      dictOptions: [],
+      tagType: ''
+    }
+  },
+  watch: {
+    dictCode: {
+      immediate: true,
+      handler() {
+        this.initDictData()
       }
     }
+  },
+  created() {
+    // console.log(this.dictCode);
+    if (!this.type || this.type === 'list') {
+      this.tagType = 'select'
+    } else {
+      this.tagType = this.type
+    }
+    // 获取字典数据
+    // this.initDictData();
+  },
+  computed: {
+    getValueSting() {
+      return this.value !== null ? this.value.toString() : null
+    }
+  },
+  methods: {
+    initDictData() {
+      // 根据字典Code, 初始化字典数组
+      ajaxGetDictItems(this.dictCode, null).then((res) => {
+        if (res.success) {
+          //                console.log(res.result);
+          this.dictOptions = res.result
+        }
+      })
+    },
+    handleInput(e) {
+      let val
+      if (this.tagType == 'radio') {
+        val = e.target.value
+      } else {
+        val = e
+      }
+      if (this.triggerChange) {
+        this.$emit('change', val)
+      } else {
+        this.$emit('input', val)
+      }
+    },
+    setCurrentDictOptions(dictOptions) {
+      this.dictOptions = dictOptions
+    },
+    getCurrentDictOptions() {
+      return this.dictOptions
+    }
   }
+}
 </script>
 
 <style scoped>
