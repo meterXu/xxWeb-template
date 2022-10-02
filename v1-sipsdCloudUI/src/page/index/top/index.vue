@@ -108,100 +108,100 @@
   </div>
 </template>
 <script>
-  import {mapGetters, mapState} from 'vuex'
-  import {fullscreenToggel, handleImg, listenfullscreen} from '@/util/util'
-  import topLock from './top-lock'
-  import topMenu from './top-menu'
-  import topSearch from './top-search'
-  import topTheme from './top-theme'
-  import topLogs from './top-logs'
-  import topColor from './top-color'
-  import topSetting from './top-setting'
-  export default {
-    name: 'Top',
-    components: {
-      topLock,
-      topMenu,
-      topSearch,
-      topTheme,
-      topLogs,
-      topColor,
-      topSetting
-    },
-    filters: {},
-    data() {
-      return {
-        total:'',
-        timer:'',
-        isAdmin: false,
+import {mapGetters, mapState} from 'vuex'
+import {fullscreenToggel, handleImg, listenfullscreen} from '@/util/util'
+import topLock from './top-lock'
+import topMenu from './top-menu'
+import topSearch from './top-search'
+import topTheme from './top-theme'
+import topLogs from './top-logs'
+import topColor from './top-color'
+import topSetting from './top-setting'
+export default {
+  name: 'Top',
+  components: {
+    topLock,
+    topMenu,
+    topSearch,
+    topTheme,
+    topLogs,
+    topColor,
+    topSetting
+  },
+  filters: {},
+  data() {
+    return {
+      total:'',
+      timer:'',
+      isAdmin: false,
 	      redirectUri: window.encodeURIComponent(window.location.origin + this.$conf.publicPath)
-      }
+    }
+  },
+  computed: {
+    ...mapState({
+      showDebug: state => state.common.showDebug,
+      showTheme: state => state.common.showTheme,
+      showLock: state => state.common.showLock,
+      showFullScren: state => state.common.showFullScren,
+      showCollapse: state => state.common.showCollapse,
+      showSearch: state => state.common.showSearch,
+      showMenu: state => state.common.showMenu,
+      showColor: state => state.common.showColor
+    }),
+    ...mapGetters([
+      'userInfo',
+      'isFullScren',
+      'tagWel',
+      'tagList',
+      'isCollapse',
+      'tag',
+      'logsLen',
+      'logsFlag'
+    ])
+  },
+  // created() {
+  //   handleImg(this.userInfo.avatar, 'thumbnail')
+  //   if (this.$store.getters.roles) {
+  //     this.$store.getters.roles.forEach(r => {
+  //       if (r === 1) {
+  //         this.isAdmin = true
+  //         return
+  //       }
+  //     })
+  //   }
+  // },
+  mounted() {
+    listenfullscreen(this.setScreen)
+    // 定时器
+    this.timer = setInterval(()=> {
+      this.total=this.$store.getters.total;
+    }, 1000);
+  },
+  beforeDestroy() {
+    clearInterval(this.timer);
+  },
+  methods: {
+    handleScreen() {
+      fullscreenToggel()
     },
-    computed: {
-      ...mapState({
-        showDebug: state => state.common.showDebug,
-        showTheme: state => state.common.showTheme,
-        showLock: state => state.common.showLock,
-        showFullScren: state => state.common.showFullScren,
-        showCollapse: state => state.common.showCollapse,
-        showSearch: state => state.common.showSearch,
-        showMenu: state => state.common.showMenu,
-        showColor: state => state.common.showColor
-      }),
-      ...mapGetters([
-        'userInfo',
-        'isFullScren',
-        'tagWel',
-        'tagList',
-        'isCollapse',
-        'tag',
-        'logsLen',
-        'logsFlag'
-      ])
+    setCollapse() {
+      this.$store.commit('SET_COLLAPSE')
     },
-    // created() {
-    //   handleImg(this.userInfo.avatar, 'thumbnail')
-    //   if (this.$store.getters.roles) {
-    //     this.$store.getters.roles.forEach(r => {
-    //       if (r === 1) {
-    //         this.isAdmin = true
-    //         return
-    //       }
-    //     })
-    //   }
-    // },
-    mounted() {
-      listenfullscreen(this.setScreen)
-      // 定时器
-      this.timer = setInterval(()=> {
-       this.total=this.$store.getters.total;
-      }, 1000);
+    setScreen() {
+      this.$store.commit('SET_FULLSCREN')
     },
-    beforeDestroy() {
-      clearInterval(this.timer);
-    },
-    methods: {
-      handleScreen() {
-        fullscreenToggel()
-      },
-      setCollapse() {
-        this.$store.commit('SET_COLLAPSE')
-      },
-      setScreen() {
-        this.$store.commit('SET_FULLSCREN')
-      },
-      logout() {
-        this.$confirm('是否退出系统, 是否继续?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }).then(() => {
-          this.$store.dispatch('LogOut').then(() => {
-            this.$router.push({path: '/login'})
-          })
+    logout() {
+      this.$confirm('是否退出系统, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        this.$store.dispatch('LogOut').then(() => {
+          this.$router.push({path: '/login'})
         })
-      },
-          ssologout() {
+      })
+    },
+    ssologout() {
       this.$confirm('是否退出系统, 是否继续?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
@@ -212,8 +212,8 @@
         })
       })
     }
-    }
   }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -16,7 +16,7 @@
               size="mini"
             />
             <el-tree
-              ref="_selectOrgTree"
+              ref="selectOrgTree"
               :data="treeData"
               node-key="id"
               :props="defaultProps"
@@ -243,7 +243,7 @@ export default {
   },
   watch: {
     filterText (val) {
-      this.$refs._selectOrgTree.filter(val)
+      this.$refs.selectOrgTree.filter(val)
     },
     visibleInChild (val) {
       if (!val) {

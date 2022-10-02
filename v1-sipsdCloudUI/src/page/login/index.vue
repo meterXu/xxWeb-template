@@ -59,7 +59,7 @@ export default {
         if (this.validatenull(code) && this.validatenull(state)) return
         const loading = this.$loading({
           lock: true,
-          text: `登录中,请稍后。。。`,
+          text: '登录中,请稍后。。。',
           spinner: 'el-icon-loading'
         })
         this.$store.dispatch('SsoLogin', {
@@ -71,7 +71,6 @@ export default {
           window.close()
           this.$router.push({ path: this.tagWel.value })
         }).catch((e) => {
-          console.log(e)
           loading.close()
         })
       },

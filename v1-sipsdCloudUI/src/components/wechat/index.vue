@@ -731,22 +731,22 @@ export default {
       this.menu_data_completing()
       for (let i = 0; i < this.menu.button.length; i++) {
         if (this.menu.button[i].sub_button.length > 0) {
-          const _sub_button = []
+          const sub_button = []
           for (let j = 0; j < this.menu.button[i].sub_button.length; j++) {
             if (this.menu.button[i].sub_button[j].type == 'click') {
-              _sub_button[j] = {
+              sub_button[j] = {
                 type: this.menu.button[i].sub_button[j].type,
                 name: this.menu.button[i].sub_button[j].name,
                 key: this.menu.button[i].sub_button[j].key
               }
             } else if (this.menu.button[i].sub_button[j].type == 'view') {
-              _sub_button[j] = {
+              sub_button[j] = {
                 type: this.menu.button[i].sub_button[j].type,
                 name: this.menu.button[i].sub_button[j].name,
                 url: this.menu.button[i].sub_button[j].url
               }
             } else if (this.menu.button[i].sub_button[j].type == 'miniprogram') {
-              _sub_button[j] = {
+              sub_button[j] = {
                 type: this.menu.button[i].sub_button[j].type,
                 name: this.menu.button[i].sub_button[j].name,
                 appid: this.menu.button[i].sub_button[j].appid,
@@ -757,17 +757,17 @@ export default {
           if (this.menu.button[i].type == 'click') {
             this.new_menu.button[i] = {
               name: this.menu.button[i].name,
-              sub_button: _sub_button
+              sub_button: sub_button
             }
           } else if (this.menu.button[i].type == 'view') {
             this.new_menu.button[i] = {
               name: this.menu.button[i].name,
-              sub_button: _sub_button
+              sub_button: sub_button
             }
           } else if (this.menu.button[i].type == 'miniprogram') {
             this.new_menu.button[i] = {
               name: this.menu.button[i].name,
-              sub_button: _sub_button
+              sub_button: sub_button
             }
           }
         } else {
@@ -960,14 +960,14 @@ export default {
       if (this.activeMenuType() === 1) {
         // 一级菜单
         switch (this.menu.button[this.activeMenuIndex].type) {
-          case 'click':
-            return 1
-          case 'view':
-            return 2
-          case 'miniprogram':
-            return 3
-          default:
-            return 0
+        case 'click':
+          return 1
+        case 'view':
+          return 2
+        case 'miniprogram':
+          return 3
+        default:
+          return 0
         }
       } else if (this.activeMenuType() === 2) {
         // 子菜单、二级菜单
@@ -976,14 +976,14 @@ export default {
             this.activeMenuItemIndex
           ].type
         ) {
-          case 'click':
-            return 1
-          case 'view':
-            return 2
-          case 'miniprogram':
-            return 3
-          default:
-            return 0
+        case 'click':
+          return 1
+        case 'view':
+          return 2
+        case 'miniprogram':
+          return 3
+        default:
+          return 0
         }
       } else {
         return ''

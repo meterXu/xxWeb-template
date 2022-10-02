@@ -151,11 +151,11 @@ export function getDeptByUserId(query) {
 }
 // 部门人员列表
 export function getDeptUserList(query) {
-    return request({
-        url: '/admin/user/getDeptUserList',
-        method: 'get',
-        params: query
-      })
+  return request({
+    url: '/admin/user/getDeptUserList',
+    method: 'get',
+    params: query
+  })
 }
 
 

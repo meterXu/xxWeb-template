@@ -1,17 +1,17 @@
 // 一次性引入
-import * as turf from '@turf/turf' 
+import * as turf from '@turf/turf'
 // 控制能否使用 区域拾取 函数
 let setGetAreaFacilities = false
 
 /**
  * 拖拽
  */
-export function dropDiv(_this) {
+export function dropDiv(that) {
   var e = window.event
-  _this.addEventListener('click', function(e) { console.log(111, e) })
+  that.addEventListener('click', function(e) {})
   var dragging = false
   var boxX, boxY, mouseX, mouseY, offsetX, offsetY
-  var box = _this
+  var box = that
   // 鼠标按下的动作
   box.onmousedown = down
   // 鼠标的移动动作
@@ -95,11 +95,11 @@ export function dropDiv(_this) {
  */
 
 export function clearMeasure() {
-  const _targetElement = Array.prototype.slice.call(document.getElementsByClassName('measure-result'))
-  if (!_targetElement.length) {
+  const targetElement1 = Array.prototype.slice.call(document.getElementsByClassName('measure-result'))
+  if (!targetElement1.length) {
     return
   } else {
-    _targetElement.map(item => {
+    targetElement1.map(item => {
       item.remove()
     })
   }
@@ -236,8 +236,8 @@ export function measureLength() {
   }
 
   function getLength(coords) {
-    var _points = points.concat([coords])
-    var line = turf.lineString(_points)
+    var points1 = points.concat([coords])
+    var line = turf.lineString(points1)
     var len = turf.length(line)
     if (len < 1) {
       len = Math.round(len * 1000) + '米'
@@ -428,7 +428,7 @@ export function measureArea() {
     })
     map.getSource('points-area').setData(jsonPoint)
   }
-  
+
   map.on('click', function(_e) {
     if (isMeasure) {
       var coords = [_e.lngLat.lng, _e.lngLat.lat]
@@ -445,18 +445,18 @@ export function measureArea() {
       ele.innerHTML = getArea(coords)
       tooltip.setLngLat(coords)
       // 添加关闭按钮
-      var _ele = document.createElement('div')
-      _ele.setAttribute('class', 'measure-result close')
+      var ele1 = document.createElement('div')
+      ele1.setAttribute('class', 'measure-result close')
       var option = {
-        element: _ele,
+        element: ele1,
         anchor: 'bottom-left',
         offset: [-5, -10]
       }
-      _ele.innerHTML = '×'
+      ele1.innerHTML = '×'
       new mapmost.Marker(option)
         .setLngLat(coords)
         .addTo(map)
-      _ele.onclick = function(__e) {
+      ele1.onclick = function(__e) {
         __e.stopPropagation()
         // map.doubleClickZoom.enable()
         // 这里是为了可以在清除当前痕迹后，可以继续绘制
@@ -502,14 +502,14 @@ export function getAreaFacilities() {
   let coordinates = new Array(5)
   // 是否按住鼠标移动
   let mouserMove = false
-  // 
+  //
   setGetAreaFacilities = true
   // 添加绘制图层
   function addDrawLayer() {
     if (map.getLayer('draw')) {
       return
     }
-    
+
 
     const geoJson = {
       'type': 'FeatureCollection',
@@ -575,13 +575,12 @@ export function getAreaFacilities() {
     coordinates[4] = [point.lng, point.lat] // 闭合
     mouserMove = true // 鼠标按下
 
-    
+
   })
   map.on('mouseup', (e) => {
     mouserMove = false // 鼠标抬
     // 获取当前矩形四个点坐标
     map.dragPan.enable() // 允许地图拖动
-    console.log('选取坐标点 =', coordinates)
   })
   map.on('mousemove', (e) => {
     if (mouserMove && setGetAreaFacilities) {

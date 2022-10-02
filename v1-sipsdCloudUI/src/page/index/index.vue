@@ -121,7 +121,6 @@ export default {
         try {
           self.stompClient.send('test')
         } catch (err) {
-          console.log('断线了: ' + err)
           self.connection()
         }
       }, 5000)
@@ -155,7 +154,6 @@ export default {
     disconnect() {
       if (this.stompClient != null) {
         this.stompClient.disconnect()
-        console.log('Disconnected')
       }
     }
   }

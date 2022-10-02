@@ -77,11 +77,11 @@ export default {
       list = list.join('&').toString()
       if (flag) {
         this.$route.query.src = `${this.$route.query.src}${
-          list.length > 0 ? `&list` : ''
+          list.length > 0 ? '&list' : ''
         }`
       } else {
         this.$route.query.src = `${this.$route.query.src}${
-          list.length > 0 ? `?list` : ''
+          list.length > 0 ? '?list' : ''
         }`
       }
       // 超时5s自动隐藏等待框，加强用户体验

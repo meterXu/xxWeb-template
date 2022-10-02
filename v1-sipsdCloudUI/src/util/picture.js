@@ -18,7 +18,7 @@ export default  {
     if (step == null) {
       step = min_step;
     }
-    if (direction == "right") {
+    if (direction == 'right') {
       step++;
       //旋转到原位置，即超过最大值
       step > max_step && (step = min_step);
@@ -28,36 +28,36 @@ export default  {
     }
     //旋转角度以弧度值为参数
     let degree = (step * 90 * Math.PI) / 180;
-    let ctx = canvas.getContext("2d");
+    let ctx = canvas.getContext('2d');
     switch (step) {
-      case 0:
-        canvas.width = width;
-        canvas.height = height;
-        ctx.drawImage(img, 0, 0);
-        break;
-      case 1:
-        canvas.width = height;
-        canvas.height = width;
-        ctx.rotate(degree);
-        ctx.drawImage(img, 0, -height);
-        break;
-      case 2:
-        canvas.width = width;
-        canvas.height = height;
-        ctx.rotate(degree);
-        ctx.drawImage(img, -width, -height);
-        break;
-      case 3:
-        canvas.width = height;
-        canvas.height = width;
-        ctx.rotate(degree);
-        ctx.drawImage(img, -width, 0);
-        break;
+    case 0:
+      canvas.width = width;
+      canvas.height = height;
+      ctx.drawImage(img, 0, 0);
+      break;
+    case 1:
+      canvas.width = height;
+      canvas.height = width;
+      ctx.rotate(degree);
+      ctx.drawImage(img, 0, -height);
+      break;
+    case 2:
+      canvas.width = width;
+      canvas.height = height;
+      ctx.rotate(degree);
+      ctx.drawImage(img, -width, -height);
+      break;
+    case 3:
+      canvas.width = height;
+      canvas.height = width;
+      ctx.rotate(degree);
+      ctx.drawImage(img, -width, 0);
+      break;
     }
   },
   /**
    * 将文件转为base64
-   * @param {文件实体} file 
+   * @param {文件实体} file
    */
   fileToBase64(file) {
     var reader = new FileReader()
@@ -66,29 +66,26 @@ export default  {
       return reader.result
     }
     reader.onerror = function (error) {
-      console.log('Error: ', error)
     }
   },
   /**
    * 压缩图片
-   * @param {*} img 
-   * @param {*} Orientation 
-   * @returns 
+   * @param {*} img
+   * @param {*} Orientation
+   * @returns
    */
   CompressImage(img, Orientation = '') {
-    console.log('img:', img)
-    let canvas = document.createElement("canvas");
-    let ctx = canvas.getContext("2d");
+    let canvas = document.createElement('canvas');
+    let ctx = canvas.getContext('2d');
     //瓦片canvas
-    let tCanvas = document.createElement("canvas");
-    let tctx = tCanvas.getContext("2d");
+    let tCanvas = document.createElement('canvas');
+    let tctx = tCanvas.getContext('2d');
     let initSize = img.size;
     let width = img.width;
     let height = img.height;
     //如果图片大于四百万像素，计算压缩比并将大小压至400万以下
     let ratio;
     if ((ratio = (width * height) / 4000000) > 1) {
-      console.log("大于400万像素");
       ratio = Math.sqrt(ratio);
       width /= ratio;
       height /= ratio;
@@ -98,12 +95,11 @@ export default  {
     canvas.width = width;
     canvas.height = height;
     //铺底色
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = '#fff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     //如果图片像素大于1000万则使用瓦片绘制
     let count;
     if ((count = (width * height) / 10000000) > 1) {
-      console.log("超过100W像素");
       count = ~~(Math.sqrt(count) + 1); //计算要分成多少块瓦片
       // 计算每块瓦片的宽和高
       let nw = ~~(width / count);
@@ -130,30 +126,23 @@ export default  {
       ctx.drawImage(img, 0, 0, width, height);
     }
     //修复ios上传图片的时候 被旋转的问题
-    if (Orientation != "" && Orientation != 1) {
+    if (Orientation != '' && Orientation != 1) {
       switch (Orientation) {
-        case 6: //需要顺时针（向左）90度旋转
-          this.RotateImage(img, "left", canvas);
-          break;
-        case 8: //需要逆时针（向右）90度旋转
-          this.RotateImage(img, "right", canvas);
-          break;
-        case 3: //需要180度旋转
-          this.RotateImage(img, "right", canvas); //转两次
-          this.RotateImage(img, "right", canvas);
-          break;
+      case 6: //需要顺时针（向左）90度旋转
+        this.RotateImage(img, 'left', canvas);
+        break;
+      case 8: //需要逆时针（向右）90度旋转
+        this.RotateImage(img, 'right', canvas);
+        break;
+      case 3: //需要180度旋转
+        this.RotateImage(img, 'right', canvas); //转两次
+        this.RotateImage(img, 'right', canvas);
+        break;
       }
     }
     //进行最小压缩
-    let ndata = canvas.toDataURL("image/jpeg", 0.2);
-    console.log("压缩前：" + initSize);
-    console.log("压缩后：" + ndata.length);
-    // console.log(
-    //   "压缩率：" + ~~((100 * (initSize - ndata.length)) / initSize) + "%"
-    // );
+    let ndata = canvas.toDataURL('image/jpeg', 0.2);
     tCanvas.width = tCanvas.height = canvas.width = canvas.height = 0;
-
-    // console.log("🚀 ~ file: picture.js ~ line 136 ~ CompressImage ~ ndata", ndata)
     return ndata;
 
   },
