@@ -8,17 +8,16 @@
 
 <script>
 export default {
-name: "Head",
+  name: 'Head',
   components: {
   },
   data(){
     return {
-      value: ""
+      value: ''
     }
   },
   methods:{
     changeTitle(data) {
-      console.log(data);
       this.$store.commit('setHeadTitle',data)
     }
   }

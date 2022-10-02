@@ -9,21 +9,20 @@
 <script>
 import {mapGetters} from 'vuex'
 export default {
-name: "Head",
+  name: 'Head',
   components: {
 
   },
   data(){
     return {
-      value: ""
+      value: ''
     }
   },
   computed:{
-    ...mapGetters(["showHeadTitle"])
+    ...mapGetters(['showHeadTitle'])
   },
   methods:{
     onSearch() {
-      console.log(this.value);
     }
   }
 }
