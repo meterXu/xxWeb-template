@@ -27,7 +27,7 @@
                 type="primary"
                 @click="searchReset"
                 icon="reload"
-                style="margin-left: 8px"
+                style="margin-left: 8px;"
               >重置</a-button>
             </span>
           </a-col>
@@ -45,7 +45,7 @@
             <a-icon type="delete" />删除
           </a-menu-item>
         </a-menu>
-        <a-button style="margin-left: 8px">
+        <a-button style="margin-left: 8px;">
           批量操作
           <a-icon type="down" />
         </a-button>
@@ -54,8 +54,8 @@
     <div>
       <div class="ant-alert ant-alert-info" style="margin-bottom: 16px;">
         <i class="anticon anticon-info-circle ant-alert-icon"></i> 已选择
-        <a style="font-weight: 600" v-text="selectedRowKeys.length"></a>项
-        <a style="margin-left: 24px" @click="onClearSelected">清空</a>
+        <a style="font-weight: 600;" v-text="selectedRowKeys.length"></a>项
+        <a style="margin-left: 24px;" @click="onClearSelected">清空</a>
       </div>
 
       <a-table
@@ -80,7 +80,7 @@
             :src="getImgView(text)"
             height="25px"
             alt="图片不存在"
-            style="max-width:80px;font-size: 12px;font-style: italic;"
+            style="max-width: 80px;font-size: 12px;font-style: italic;"
           />
         </template>
         <template slot="fileSlot" slot-scope="text">
@@ -246,5 +246,5 @@ export default {
 }
 </script>
 <style scoped>
-@import "../../assets/less/common.less";
+@import '../../assets/less/common.less';
 </style>

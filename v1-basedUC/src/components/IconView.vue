@@ -23,7 +23,7 @@ export default {
 .hello {
   text-align: center;
 }
-.hello img{
+.hello img {
   width: 160px;
 }
 h3 {

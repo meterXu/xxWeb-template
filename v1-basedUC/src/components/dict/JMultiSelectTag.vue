@@ -15,7 +15,7 @@
       v-for="(item,index) in dictOptions"
       :key="index"
       :value="item.value">
-      <span style="display: inline-block;width: 100%" :title=" item.text || item.label ">
+      <span style="display: inline-block;width: 100%;" :title=" item.text || item.label ">
         {{ item.text || item.label }}
       </span>
     </a-select-option>
@@ -24,71 +24,71 @@
 </template>
 
 <script>
-  import { ajaxGetDictItems } from '../../api'
-  export default {
-    name: 'JMultiSelectTag',
-    props: {
-      dictCode: String,
-      placeholder: String,
-      disabled: Boolean,
-      value: String,
-      type: String,
-      options: Array
-    },
-    data() {
-      return {
-        dictOptions: [],
-        tagType: '',
-        arrayValue: !this.value ? [] : this.value.split(',')
-      }
-    },
-    created() {
-      if (!this.type || this.type === 'list_multi') {
-        this.tagType = 'select'
-      } else {
-        this.tagType = this.type
-      }
-      // 获取字典数据
-      this.initDictData()
-    },
-    watch: {
-      options: function(val) {
-        this.setCurrentDictOptions(val)
-      },
-      value (val) {
-        if (!val) {
-          this.arrayValue = []
-        } else {
-          this.arrayValue = this.value.split(',')
-        }
-      }
-    },
-    methods: {
-      initDictData() {
-        if (this.options && this.options.length > 0) {
-          this.dictOptions = [...this.options]
-        } else {
-          // 根据字典Code, 初始化字典数组
-          ajaxGetDictItems(this.dictCode, null).then((res) => {
-            if (res.success) {
-              this.dictOptions = res.result
-            }
-          })
-        }
-      },
-      onChange (selectedValue) {
-        this.$emit('change', selectedValue.join(','))
-      },
-      setCurrentDictOptions(dictOptions) {
-        this.dictOptions = dictOptions
-      },
-      getCurrentDictOptions() {
-        return this.dictOptions
-      }
-    },
-    model: {
-      prop: 'value',
-      event: 'change'
+import { ajaxGetDictItems } from '../../api'
+export default {
+  name: 'JMultiSelectTag',
+  props: {
+    dictCode: String,
+    placeholder: String,
+    disabled: Boolean,
+    value: String,
+    type: String,
+    options: Array
+  },
+  data() {
+    return {
+      dictOptions: [],
+      tagType: '',
+      arrayValue: !this.value ? [] : this.value.split(',')
     }
+  },
+  created() {
+    if (!this.type || this.type === 'list_multi') {
+      this.tagType = 'select'
+    } else {
+      this.tagType = this.type
+    }
+    // 获取字典数据
+    this.initDictData()
+  },
+  watch: {
+    options: function(val) {
+      this.setCurrentDictOptions(val)
+    },
+    value (val) {
+      if (!val) {
+        this.arrayValue = []
+      } else {
+        this.arrayValue = this.value.split(',')
+      }
+    }
+  },
+  methods: {
+    initDictData() {
+      if (this.options && this.options.length > 0) {
+        this.dictOptions = [...this.options]
+      } else {
+        // 根据字典Code, 初始化字典数组
+        ajaxGetDictItems(this.dictCode, null).then((res) => {
+          if (res.success) {
+            this.dictOptions = res.result
+          }
+        })
+      }
+    },
+    onChange (selectedValue) {
+      this.$emit('change', selectedValue.join(','))
+    },
+    setCurrentDictOptions(dictOptions) {
+      this.dictOptions = dictOptions
+    },
+    getCurrentDictOptions() {
+      return this.dictOptions
+    }
+  },
+  model: {
+    prop: 'value',
+    event: 'change'
   }
+}
 </script>
