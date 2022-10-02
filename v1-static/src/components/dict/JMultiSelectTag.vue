@@ -15,7 +15,7 @@
       v-for="(item,index) in dictOptions"
       :key="index"
       :value="item.value">
-      <span style="display: inline-block;width: 100%" :title=" item.text || item.label ">
+      <span style="display: inline-block;width: 100%;" :title=" item.text || item.label ">
         {{ item.text || item.label }}
       </span>
     </a-select-option>

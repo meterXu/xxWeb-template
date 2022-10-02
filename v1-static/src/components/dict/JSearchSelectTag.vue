@@ -7,7 +7,7 @@
     @search="loadData"
     :placeholder="placeholder"
     v-model="selectedAsyncValue"
-    style="width: 100%"
+    style="width: 100%;"
     :filterOption="false"
     @change="handleAsyncChange"
     allowClear
@@ -22,7 +22,7 @@
     showSearch
     :placeholder="placeholder"
     optionFilterProp="children"
-    style="width: 100%"
+    style="width: 100%;"
     @change="handleChange"
     :filterOption="filterOption"
     v-model="selectedValue"

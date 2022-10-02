@@ -12,7 +12,7 @@
     @change="handleInput">
     <a-select-option :value="undefined">请选择</a-select-option>
     <a-select-option v-for="(item, key) in dictOptions" :key="key" :value="item.value">
-      <span style="display: inline-block;width: 100%" :title=" item.text || item.label ">
+      <span style="display: inline-block;width: 100%;" :title=" item.text || item.label ">
         {{ item.text || item.label }}
       </span>
     </a-select-option>
