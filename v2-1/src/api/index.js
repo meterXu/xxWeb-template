@@ -3,14 +3,14 @@ export function queryPermissionsByUser() {
     let permission = {}
     permission.menu = [
       {
-        path: '/oauth2_gateway',
+        path: '/{{ namespace }}',
         meta:{
           title:'网关管理',
           icon: {icon:'DoIncoming',conf:{fill:'currentColor'}},
         },
         children: [
           {
-            path: '/oauth2_gateway/route',
+            path: '/{{ namespace }}/route',
             meta:{
               title: '动态路由',
               icon:{icon:'DoEqualizer',conf:{fill:'currentColor'}}
