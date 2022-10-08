@@ -60,61 +60,61 @@ const project_{{ namespace }} = {
     autoHideHeader: false,
   },
   config: {
-    "logo": "static/dpark/logo_sipsd.png",
-    "darkLogo": "static/dpark/logo_sipsd_white.png",
-    "favicon": "static/dpark/logo_sipsd_favicon.png",
-    "title": "前端项目",
-    "login": {
-      "title": "前端项目",
-      "desc": "项目由s2驱动！"
+    logo: "static/dpark/logo_sipsd.png",
+    darkLogo: "static/dpark/logo_sipsd_white.png",
+    favicon: "static/dpark/logo_sipsd_favicon.png",
+    title: "前端项目",
+    login: {
+      title: "前端项目",
+      desc: "项目由s2驱动！"
     },
-    "head": {
-      "title": {
-        "desktop": "欢迎使用S2前端开发框架",
-        "mobile": "S2开发框架"
+    head: {
+      title: {
+        desktop: "欢迎使用S2前端开发框架",
+        mobile: "S2开发框架"
       },
-      "searchMenu": {
-        "show": true
+      searchMenu: {
+        show: true
       },
-      "helper": {
-        "show": true,
-        "href": "http://192.168.126.25/iplatform/pldoc/",
-        "target": "_blank"
+      helper: {
+        show: true,
+        href: "http://192.168.126.25/iplatform/pldoc/",
+        target: "_blank"
       }
     },
-    "sideMenu": {
-      "title": "项目名称"
+    sideMenu: {
+      title: "项目名称"
     },
-    "footer": {
-      "links": [{
-        "name": "帮助",
-        "href": "javascript:;",
-        "target": "_self"
+    footer: {
+      links: [{
+        name: "帮助",
+        href: "javascript:;",
+        target: "_self"
       }, {
-        "name": "隐私",
-        "href": "javascript:;",
-        "target": "_self"
+        name: "隐私",
+        href: "javascript:;",
+        target: "_self"
       },
       {
-        "name": "条款",
-        "href": "javascript:;",
-        "target": "_self"
+        name: "条款",
+        href: "javascript:;",
+        target: "_self"
       }],
-      "copyright": {
-        "content": "苏州工业园园区测绘地理信息有限公司",
-        "year": "2020",
-        "href": "http://www.dpark.com.cn",
-        "target": "_blank"
+      copyright: {
+        content: "苏州工业园园区测绘地理信息有限公司",
+        year: "2020",
+        href: "http://www.dpark.com.cn",
+        target: "_blank"
       }
     },
-    "plugins": {
-      "changeSystem": {
-        "enable": true
+    plugins: {
+      changeSystem: {
+        enable: true
       }
     },
-    "browserFilter": {
-      "chrome": 65,
-      "firefox": 53
+    browserFilter: {
+      chrome: 65,
+      firefox: 53
     }
   }
 }
