@@ -5,7 +5,7 @@
 </template>
 <script>
 import Vue from 'vue'
-import {portal,util,type} from "@dpark/s2-utils"
+import {portal,util,type} from '@dpark/s2-utils'
 export default {
   name:'login',
   mounted(){

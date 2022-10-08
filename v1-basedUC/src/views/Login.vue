@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import {util} from "@dpark/s2-utils"
+import {util} from '@dpark/s2-utils'
 export default {
     name:'login',
     mounted(){
