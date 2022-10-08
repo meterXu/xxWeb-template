@@ -1,4 +1,4 @@
-# v2x2
+# {{projectName}}
 > s2 2.x 基于UC单点登录的应用
 
 [s2在线帮助文档](http://58.210.9.133/iplatform/pldoc)
