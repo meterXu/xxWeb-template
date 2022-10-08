@@ -24,7 +24,7 @@
 <script>
 export default {
 
-name: "List",
+  name: 'List',
   components: {
 
   },
@@ -33,23 +33,23 @@ name: "List",
       items: [
         {
           id: 0,
-          listName: "数据分析",
-          content: "暂无介绍"
+          listName: '数据分析',
+          content: '暂无介绍'
         },
         {
           id: 1,
-          listName: "数据分析",
-          content: "暂无介绍"
+          listName: '数据分析',
+          content: '暂无介绍'
         },
         {
           id: 2,
-          listName: "数据分析",
-          content: "暂无介绍"
+          listName: '数据分析',
+          content: '暂无介绍'
         },
         {
           id: 3,
-          listName: "数据分析",
-          content: "暂无介绍"
+          listName: '数据分析',
+          content: '暂无介绍'
         }],
       finished:false,
     }
@@ -60,12 +60,12 @@ name: "List",
 </script>
 
 <style scoped>
-.list-cell{
+.list-cell {
   display: flex;
   justify-content: start;
   align-items: center;
 }
-.list-cell-img{
+.list-cell-img {
   width: 80px;
   height: 80px;
   margin-right: 20px;

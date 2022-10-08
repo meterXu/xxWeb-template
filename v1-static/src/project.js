@@ -66,7 +66,7 @@ const project_{{ namespace }} = {
     "title": "{{projectName}}",
     "login": {
       "title": "{{projectName}}",
-      "desc": "项目由s2驱动！"
+      "desc": ""
     },
     "head": {
       "title": {

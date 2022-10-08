@@ -9,7 +9,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lint:fix": "vue-cli-service lint --fix",
+    "lint:style": "stylelint **/*.{html,vue,css}",
+    "lint:style:fix": "stylelint **/*.{html,vue,css} --fix"
   },
   "dependencies": {
     "@dpark/icon": "^1.0.22",
@@ -27,7 +30,7 @@
     "vue-ol": "^1.0.1",
     "vue-router": "^3.4.9",
     "vuex": "^3.5.1",
-    "@dpark/logfv-web-vue": "^1.0.23"
+    "postcss-html": "^1.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -42,7 +45,10 @@
     "less-loader": "^7.0.2",
     "postcss-px2rem": "^0.3.0",
     "vue-cli-plugin-cube-ui": "~0.2.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "stylelint": "^14.12.1",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-webpack-plugin": "^3.3.0"
   },
   "eslintConfig": {
     "root": true,

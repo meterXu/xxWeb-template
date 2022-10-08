@@ -27,15 +27,15 @@ export default {
 }
 </script>
 <style scoped>
-.con{
+.con {
   padding: 20px 0;
 }
-.con-p{
+.con-p {
   text-align: center;
   font-size: 16px;
   padding: 10px 0;
 }
-.title{
+.title {
   text-align: center;
   margin-top: 150px;
   font-size: 36px;

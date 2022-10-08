@@ -1,6 +1,6 @@
 <template>
   <div class="index-list">
-    <van-grid :gutter="10" style="margin-bottom: 10px">
+    <van-grid :gutter="10" style="margin-bottom: 10px;">
       <van-grid-item v-for="item in items" :key="item.id" :icon="item.icon" :text="item.content" />
     </van-grid>
     <van-grid :gutter="10" :border="false" :column-num="2">
@@ -23,7 +23,7 @@
 <script>
 import {mapGetters} from 'vuex'
 export default {
-name: "Index",
+  name: 'Index',
   components: {
   },
   computed:{
@@ -33,36 +33,36 @@ name: "Index",
     return {
       items:[{
         id: 0,
-        content: "图片",
-        icon: "photo-o"
+        content: '图片',
+        icon: 'photo-o'
       },{
         id: 1,
-        content: "购物",
-        icon: "shop-o"
+        content: '购物',
+        icon: 'shop-o'
       },{
         id: 2,
-        content: "邮件",
-        icon: "envelop-o"
+        content: '邮件',
+        icon: 'envelop-o'
       },{
         id: 3,
-        content: "查询",
-        icon: "search"
+        content: '查询',
+        icon: 'search'
       },{
         id: 4,
-        content: "记录",
-        icon: "records"
+        content: '记录',
+        icon: 'records'
       },{
         id: 5,
-        content: "钱包",
-        icon: "pending-payment"
+        content: '钱包',
+        icon: 'pending-payment'
       },{
         id: 6,
-        content: "卡包",
-        icon: "idcard"
+        content: '卡包',
+        icon: 'idcard'
       },{
         id: 7,
-        content: "收藏",
-        icon: "star-o"
+        content: '收藏',
+        icon: 'star-o'
       }]
     }
   },

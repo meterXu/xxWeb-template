@@ -46,67 +46,67 @@
   </a-modal>
 </template>
 
-    <script>
-  export default {
-    name: 'PageAModal',
-    props: ['visible', 'formObj'],
-    model: {
-      prop: 'visible',
-      event: 'change'
-    },
-    data() {
-      return {
-        disabled: false,
-        labelCol: {
-          xs: { span: 24 },
-          sm: { span: 5 }
-        },
-        wrapperCol: {
-          xs: { span: 24 },
-          sm: { span: 16 }
-        },
-        confirmLoading: false,
-        rules: {
+<script>
+export default {
+  name: 'PageAModal',
+  props: ['visible', 'formObj'],
+  model: {
+    prop: 'visible',
+    event: 'change'
+  },
+  data() {
+    return {
+      disabled: false,
+      labelCol: {
+        xs: { span: 24 },
+        sm: { span: 5 }
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 16 }
+      },
+      confirmLoading: false,
+      rules: {
         title: [{ required: true, message: '标题必填！', trigger: 'blur' }],
         type: [{ required: true, message: '类型必填！', trigger: 'blur' }],
         method: [{ required: true, message: '方法必填！', trigger: 'blur' }]
-        },
-        url: {
-          add: '/log/create',
-          edit: '/log/create'
-        }
+      },
+      url: {
+        add: '/log/create',
+        edit: '/log/create'
       }
+    }
+  },
+  methods: {
+    close() {
+      this.$emit('change', false)
     },
-    methods: {
-      close() {
-        this.$emit('change', false)
-      },
-      handleCancel() {
-        this.close()
-      },
-      handleOk() {
-        const that = this
-        this.$refs.form.validate(valid => {
-          if (valid) {
-            that.confirmLoading = true
-            let httpurl = ''
-            let method = ''
-            if (!this.formObj.id) {
-              httpurl += this.url.add
-              method = 'post'
-            } else {
-              httpurl += this.url.edit
-              method = 'put'
-            }
+    handleCancel() {
+      this.close()
+    },
+    handleOk() {
+      const that = this
+      this.$refs.form.validate(valid => {
+        if (valid) {
+          that.confirmLoading = true
+          let httpurl = ''
+          let method = ''
+          if (!this.formObj.id) {
+            httpurl += this.url.add
+            method = 'post'
+          } else {
+            httpurl += this.url.edit
+            method = 'put'
+          }
 
-            // begin 模拟方法，静态表格增加，修改成功；实际开发请删除
-            that.$message.success('编辑成功')
-            that.$emit('ok')
-            that.confirmLoading = false
-            that.close()
-            // end
+          // begin 模拟方法，静态表格增加，修改成功；实际开发请删除
+          that.$message.success('编辑成功')
+          that.$emit('ok')
+          that.confirmLoading = false
+          that.close()
+          // end
 
-            /**
+          /**
              * 实际开发请用此处请求后端
               httpAction(httpurl, this.formObj, method)
                   .then((res) => {
@@ -122,12 +122,12 @@
                       that.close()
                   })
              */
-          }
-        })
-      }
+        }
+      })
     }
   }
-  </script>
+}
+</script>
 
     <style>
   </style>

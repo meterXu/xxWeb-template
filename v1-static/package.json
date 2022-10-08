@@ -1,5 +1,5 @@
 {
-  "name": "{{projectName}}",
+  "name": "{{ projectName }}",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,9 @@
     "build:module" : "s2 mod",
     "package":"vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "lint:fix": "vue-cli-service lint --fix",
+    "lint:style": "stylelint **/*.{html,vue,css}",
+    "lint:style:fix": "stylelint **/*.{html,vue,css} --fix",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
@@ -22,7 +25,8 @@
     "vue-ls": "^3.2.0",
     "vuex": "^3.5.1",
     "axios": "^0.18.0",
-    "lodash.pick": "^4.4.0"
+    "lodash.pick": "^4.4.0",
+    "postcss-html": "^1.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.1",
@@ -36,7 +40,10 @@
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "rxjs-compat": "^6.5.4",
-    "vue-template-compiler": "2.6.14"
+    "vue-template-compiler": "2.6.14",
+    "stylelint": "^14.12.1",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-webpack-plugin": "^3.3.0"
   },
   "eslintConfig": {
     "rules": {

@@ -20,45 +20,44 @@
 
 <script>
 export default {
-name: "Setting",
+  name: 'Setting',
   components: {
 
   },
   data(){
     return {
       items1:[
-      {
-        id: 0,
-        setName: "账户与安全",
-        value: ""
-      },{
-        id: 1,
-        setName: "支付",
-        value: ""
-      }],
+        {
+          id: 0,
+          setName: '账户与安全',
+          value: ''
+        },{
+          id: 1,
+          setName: '支付',
+          value: ''
+        }],
       items2:[
-      {
-        id: 0,
-        setName: "消息通知",
-        value: ""
-      },{
-        id: 1,
-        setName: "主题换肤",
-        value: ""
-      },{
-        id: 2,
-        setName: "隐私",
-        value: ""
-      },{
-        id: 3,
-        setName: "通用",
-        value: "地区、音效、辅助功能等"
-      }]
+        {
+          id: 0,
+          setName: '消息通知',
+          value: ''
+        },{
+          id: 1,
+          setName: '主题换肤',
+          value: ''
+        },{
+          id: 2,
+          setName: '隐私',
+          value: ''
+        },{
+          id: 3,
+          setName: '通用',
+          value: '地区、音效、辅助功能等'
+        }]
     }
   },
   methods:{
     onSearch() {
-      console.log(this.value);
     }
   }
 }

@@ -174,7 +174,6 @@ export const JeecgListMixin = {
     },
     handleDelete: function (id) {
       // begin 模拟方法，静态表格删除成功；实际开发请删除
-      console.log(id)
       this.$message.success('删除成功')
       // end
 
@@ -241,7 +240,6 @@ export const JeecgListMixin = {
       if (this.selectedRowKeys && this.selectedRowKeys.length > 0) {
         param['selections'] = this.selectedRowKeys.join(',')
       }
-      console.log('导出参数', param)
       downFile(this.url.exportXlsUrl, param).then((data) => {
         if (!data) {
           this.$message.warning('文件下载失败')
@@ -265,11 +263,9 @@ export const JeecgListMixin = {
     /* 导入 */
     handleImportExcel(info) {
       if (info.file.status !== 'uploading') {
-        console.log(info.file, info.fileList)
       }
       if (info.file.status === 'done') {
         if (info.file.response.success) {
-          // this.$message.success(`${info.file.name} 文件上传成功`);
           if (info.file.response.code === 201) {
             let { message, result: { msg, fileUrl, fileName } } = info.file.response
             let href = null
