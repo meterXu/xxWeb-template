@@ -1,20 +1,20 @@
 const project_{{ namespace }} = {
-  namespace: "{{ namespace }}",
+  namespace: '{{ namespace }}',
   mainSys:true,
   index:10,
   variable: {
     development: {
-      appid: "<请配置>",
-      appName: "<请配置>",
-      baseApi: "<请配置>",
+      appid: '<请配置>',
+      appName: '<请配置>',
+      baseApi: '<请配置>',
       tokenKey:'Authorization',
       accessTokenTime:3600000,
       sso:{
-        ssoApi: "http://58.210.9.133/iplatform/gateway/admin",
-        ssoAuth:"http://58.210.9.133/iplatform/ifp-oauth2/#/newsso",
+        ssoApi: 'http://58.210.9.133/iplatform/gateway/admin',
+        ssoAuth:'http://58.210.9.133/iplatform/ifp-oauth2/#/newsso',
       },
       minio:{
-        uploadUrl: "http://58.210.9.133/iplatform/dpark-minio-api",
+        uploadUrl: 'http://58.210.9.133/iplatform/dpark-minio-api',
       },
       logfv:{
         enable:false,
@@ -23,17 +23,17 @@ const project_{{ namespace }} = {
       }
     },
     production: {
-      appid: "<请配置>",
-      appName: "<请配置>",
-      baseApi: "<请配置>",
+      appid: '<请配置>',
+      appName: '<请配置>',
+      baseApi: '<请配置>',
       tokenKey:'Authorization',
       accessTokenTime:3600000,
       sso:{
-        ssoApi: "http://58.210.9.133/iplatform/gateway/admin",
-        ssoAuth:"http://58.210.9.133/iplatform/ifp-oauth2/#/newsso",
+        ssoApi: 'http://58.210.9.133/iplatform/gateway/admin',
+        ssoAuth:'http://58.210.9.133/iplatform/ifp-oauth2/#/newsso',
       },
       minio:{
-        uploadUrl: "http://58.210.9.133/iplatform/dpark-minio-api",
+        uploadUrl: 'http://58.210.9.133/iplatform/dpark-minio-api',
       },
       logfv:{
         enable:true,
@@ -60,51 +60,51 @@ const project_{{ namespace }} = {
     autoHideHeader: false,
   },
   config: {
-    logo: "static/dpark/logo_sipsd.png",
-    darkLogo: "static/dpark/logo_sipsd_white.png",
-    favicon: "static/dpark/logo_sipsd_favicon.png",
-    title: "前端项目",
+    logo: 'static/dpark/logo_sipsd.png',
+    darkLogo: 'static/dpark/logo_sipsd_white.png',
+    favicon: 'static/dpark/logo_sipsd_favicon.png',
+    title: '前端项目',
     login: {
-      title: "前端项目",
-      desc: "项目由s2驱动！"
+      title: '前端项目',
+      desc: '项目由s2驱动！'
     },
     head: {
       title: {
-        desktop: "欢迎使用S2前端开发框架",
-        mobile: "S2开发框架"
+        desktop: '欢迎使用S2前端开发框架',
+        mobile: 'S2开发框架'
       },
       searchMenu: {
         show: true
       },
       helper: {
         show: true,
-        href: "http://192.168.126.25/iplatform/pldoc/",
-        target: "_blank"
+        href: 'http://192.168.126.25/iplatform/pldoc/',
+        target: '_blank'
       }
     },
     sideMenu: {
-      title: "项目名称"
+      title: '项目名称'
     },
     footer: {
       links: [{
-        name: "帮助",
-        href: "javascript:;",
-        target: "_self"
+        name: '帮助',
+        href: 'javascript:;',
+        target: '_self'
       }, {
-        name: "隐私",
-        href: "javascript:;",
-        target: "_self"
+        name: '隐私',
+        href: 'javascript:;',
+        target: '_self'
       },
       {
-        name: "条款",
-        href: "javascript:;",
-        target: "_self"
+        name: '条款',
+        href: 'javascript:;',
+        target: '_self'
       }],
       copyright: {
-        content: "苏州工业园园区测绘地理信息有限公司",
-        year: "2020",
-        href: "http://www.dpark.com.cn",
-        target: "_blank"
+        content: '苏州工业园园区测绘地理信息有限公司',
+        year: '2020',
+        href: 'http://www.dpark.com.cn',
+        target: '_blank'
       }
     },
     plugins: {
