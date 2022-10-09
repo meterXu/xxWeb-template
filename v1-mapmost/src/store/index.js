@@ -1,13 +1,13 @@
 const {{namespace}} = {
-    state: {
-        content:'hello'
-    },
-    mutations:{
+  state: {
+    content:'hello'
+  },
+  mutations:{
 
-    },
-    actions:{
+  },
+  actions:{
 
-    }
+  }
 }
 
 export default {{namespace}}
