@@ -32,7 +32,7 @@ function showConfirm (){
     confirmButtonText:'重新登录',
     callback:function (action){
       if(action==='confirm'){
-        portal.logout(window.project)
+        util.logOut(Vue)
       }
     }
   })
