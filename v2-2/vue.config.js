@@ -14,9 +14,6 @@ module.exports = {
     }
   },
   configureWebpack:  config => {
-    config.entry = {
-      main: ['./src/main.js']
-    }
     if (process.env.NODE_ENV === 'production') {
       config.optimization.runtimeChunk = false
       config.optimization.splitChunks = {
