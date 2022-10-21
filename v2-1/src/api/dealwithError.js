@@ -24,8 +24,9 @@ export function dealWithError(error){
       Vue.prototype.$notify.error({title: '系统提示', message: data.message});
       break
     }
-    throw Error(data)
+    throw Error(data.message)
   }else{
+    Vue.prototype.$notify.error({title: '系统提示', message: error.message});
     throw Error(error.message)
   }
 }
