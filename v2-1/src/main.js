@@ -15,7 +15,7 @@ filter(router,Vue.prototype.$project)
 document.title = Vue.prototype.$project.config.title
 document.querySelector('link[rel="icon"]').href = Vue.prototype.$project.config.favicon
 Vue.use(element, {
-  size: 'medium',
+  size: 'small',
   menuType: 'text'
 })
 new Vue({
