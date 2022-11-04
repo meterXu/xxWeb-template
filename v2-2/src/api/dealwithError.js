@@ -4,10 +4,16 @@ import Vue from 'vue';
 export function dealWithError(error){
   if(error.response){
     let data = error.response.data;
-    if(typeof(data)==='string'&&data.indexOf('{')>-1){
-      data = JSON.parse(data);
+    if(typeof(data)==='string'){
+      if(data.indexOf('{')===0){
+        data = JSON.parse(data);
+      }else{
+        data = {message:data}
+      }
     }
-    data.message = (data.msg||data.message)||requestCreate.getErrorText(error.response.status)
+    else {
+      data.message = (data.msg||data.message)||requestCreate.getErrorText(error.response.status)
+    }
     switch (error.response.status){
     case 500:
       if (data.message === 'Token失效，请重新登录') {
