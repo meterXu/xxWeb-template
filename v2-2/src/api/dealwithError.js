@@ -1,4 +1,4 @@
-import {request as requestCreate,portal} from '@dpark/s2-xxweb-utils';
+import {request as requestCreate,util} from '@dpark/s2-xxweb-utils';
 import Vue from 'vue';
 
 export function dealWithError(error){
@@ -44,7 +44,7 @@ function showConfirm (){
     confirmButtonText:'重新登录',
     callback:function (action){
       if(action==='confirm'){
-        portal.logout(window.project)
+        util.logOut(window.project)
       }
     }
   })

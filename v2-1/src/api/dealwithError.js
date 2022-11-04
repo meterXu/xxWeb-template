@@ -1,4 +1,4 @@
-import {request as requestCreate,portal} from '@dpark/s2-xxweb-utils';
+import {request as requestCreate,util} from '@dpark/s2-xxweb-utils';
 import Vue from 'vue';
 
 export function dealWithError(error){
