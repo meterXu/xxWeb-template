@@ -8,9 +8,9 @@ const project = {
     baseApi: process.env.VUE_APP_baseApi,
   },
   redirect: {
-    index: '/{{ namespace }}/route',
-    login:'/{{ namespace }}/login',
-    '404':'/{{ namespace }}/404'
+    index: '/oauth2_gateway/route',
+    login:'/oauth2_gateway/login',
+    '404':'/oauth2_gateway/404'
   },
   style: {
     theme: 'vue-admin',
