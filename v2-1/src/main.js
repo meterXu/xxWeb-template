@@ -18,7 +18,7 @@ Vue.use(element, {
   size: 'small',
   menuType: 'text'
 })
-new Vue({
+window.vue = new Vue({
   router,
   store,
   render: h => h(App),

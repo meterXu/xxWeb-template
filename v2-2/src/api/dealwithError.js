@@ -44,7 +44,7 @@ function showConfirm (){
     confirmButtonText:'重新登录',
     callback:function (action){
       if(action==='confirm'){
-        util.logOut(window.project)
+        util.logOut(window.vue,window.project)
       }
     }
   })
