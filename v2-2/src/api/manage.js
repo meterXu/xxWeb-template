@@ -7,10 +7,10 @@ request.onResponseError(axios,(error)=>dealWithError(error))
 request.onResponseError(axiosSSO,(error)=>dealWithError(error))
 
 axios.interceptors.response.use((response) => {
-  return response.data
+  return response?response.data:{}
 })
 axiosSSO.interceptors.response.use((response) => {
-  return response.data
+  return response?response.data:{}
 })
 
 export function postAction(url, parameter) {
