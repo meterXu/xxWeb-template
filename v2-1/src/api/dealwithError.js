@@ -19,7 +19,7 @@ export function dealWithError(error){
       if (data.message === 'Token失效，请重新登录') {
         showConfirm()
       }else{
-        Vue.prototype.$message.error({showClose: true,  type: 'error', message: data.message});
+        Vue.prototype.$message({showClose: true,  type: 'error', message: data.message});
       }
       break
     case 401:{
@@ -27,11 +27,11 @@ export function dealWithError(error){
       break
     }
     default:
-      Vue.prototype.$message.error({showClose: true,  type: 'error', message: data.message});
+      Vue.prototype.$message({showClose: true,  type: 'error', message: data.message});
       break
     }
   }else{
-    Vue.prototype.$message.error({showClose: true,  type: 'error', message: data.message});
+    Vue.prototype.$message({showClose: true,  type: 'error', message: data.message});
   }
 }
 
