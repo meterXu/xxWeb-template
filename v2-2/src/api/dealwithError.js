@@ -15,20 +15,20 @@ export function dealWithError(error){
   }
   if(error.response){
     switch (error.response.status){
-    case 500:
-      if (data.message === 'Token失效，请重新登录') {
-        showConfirm()
-      }else{
-        Vue.prototype.$message({showClose: true,  type: 'error', message: data.message});
+      case 500:
+        if (data.message === 'Token失效，请重新登录') {
+          showConfirm()
+        }else{
+          Vue.prototype.$message({showClose: true,  type: 'error', message: data.message});
+        }
+        break
+      case 401:{
+        util.logOut(window.vue,window.project)
+        break
       }
-      break
-    case 401:{
-      util.logOut(window.vue,window.project)
-      break
-    }
-    default:
-      Vue.prototype.$message({showClose: true,  type: 'error', message: data.message});
-      break
+      default:
+        Vue.prototype.$message({showClose: true,  type: 'error', message: data.message});
+        break
     }
   }else{
     Vue.prototype.$message({showClose: true,  type: 'error', message: data.message});
