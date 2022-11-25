@@ -19,10 +19,8 @@ const project = {
     color: '#1890FF',
     layout: 'sidemenu',
     multipage: true,
-    colorWeak: false,
-    fixedHeader: false,
-    fixSiderbar: false,
-    autoHideHeader: false,
+    fixedTabs: false,
+    fixSideMenu: false
   },
   config: {
     logo: './static/dpark/logo_sipsd_white.png',
@@ -33,10 +31,14 @@ const project = {
       title: '{{projectName}}',
       desc: ''
     },
+    menu:{
+      mode:'router'
+    },
     head: {
       logo:{
         show: true,
       },
+      hamburger:true,
       title: {
         show: true,
         desktop: '欢迎使用{{projectName}}',
