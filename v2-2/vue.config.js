@@ -5,7 +5,7 @@ fs.writeFileSync('./public/project.js','window.project='+JSON.stringify(project,
 module.exports = {
   publicPath:'./',
   lintOnSave: undefined,
-  productionSourceMap: true,
+  productionSourceMap: false,
   chainWebpack: (config) => {
     if (process.env.npm_config_report) {
       config
