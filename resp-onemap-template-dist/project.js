@@ -1,11 +1,11 @@
 window.project={
-  "namespace": "{{namespace}}",
+  "namespace": "onemap_client",
   "mainSys": true,
   "index": 10,
   "variable": {
-    "appid": "{{appid}}",
+    "appid": "d31d02acdd65d82548d0b797ca9cedc0",
     "datawayUrl": "http://58.210.9.133/iplatform/rsep-onemap-service/api/v1/",
-    "appName": "{{appName}}",
+    "appName": "徐州一张图",
     "tokenKey": "Authorization",
     "baseApi": "http://58.210.9.133/iplatform/gateway/admin",
     "ssoAuth": "http://58.210.9.133/iplatform/ifp-oauth2/#/newsso/login"
@@ -26,17 +26,17 @@ window.project={
     "autoHideHeader": false
   },
   "config": {
-    "projectName": "{{appName}}",
+    "projectName": "徐州一张图",
     "logo": "",
-    "favicon": "",
-    "menu":{
-      "mode":'router'
+    "favicon": "static/dpark/logo_sipsd_favicon.png",
+    "menu": {
+      "mode": "router"
     },
     "head": {
       "logo": {
         "show": true
       },
-      "hamburger":true,
+      "hamburger": true,
       "title": {
         "show": true
       },
@@ -65,7 +65,7 @@ window.project={
       "logo": {
         "show": true
       },
-      "hamburger":false,
+      "hamburger": false,
       "user": {
         "show": false,
         "username": true,

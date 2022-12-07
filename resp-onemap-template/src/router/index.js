@@ -52,11 +52,6 @@ router.beforeEach((to, from, next) => {
       })
       Object.assign(Vue.prototype.$project.config, systemParam)
     }
-    // 系统标题配置
-    document.title = process.env.VUE_APP_appName
-    // favicon配置
-    document.querySelector('link[rel="icon"]').href = Vue.prototype.$project.config.favicon
-    // vm.app.appConfig.config.head.title.desktop  =  12312
     next()
   }).catch(() => {
     next()

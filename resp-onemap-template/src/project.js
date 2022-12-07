@@ -1,5 +1,5 @@
 const project = {
-  namespace: '{{namespace}}',
+  namespace: 'onemap_client',
   mainSys: true,
   index: 10,
   variable: {
@@ -31,15 +31,15 @@ const project = {
     // logo路径或地址
     logo: '',
     // favicon路径或地址
-    favicon: '',
+    favicon: 'static/dpark/logo_sipsd_favicon.png',
     // login: {
     //   title: 'rsep_onemap_client',
     //   desc: ''
     // },
-    // 只控制显隐
     menu:{
       mode:'router'
     },
+    // 只控制显隐
     head: {
       // 左侧logo
       logo: {
