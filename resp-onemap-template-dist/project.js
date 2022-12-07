@@ -1,5 +1,5 @@
 window.project={
-  "namespace": "onemap_client",
+  "namespace": "{{namespace}}",
   "mainSys": true,
   "index": 10,
   "variable": {
