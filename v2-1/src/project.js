@@ -17,7 +17,6 @@ const project = {
     color: '#1890FF',
     layout: 'sidemenu',
     multipage: true,
-    fixedTabs: false,
     fixSideMenu: false
   },
   config: {
@@ -86,6 +85,7 @@ const project = {
       }
     },
     tabs: {
+      show:true,
       icon: true,
     },
     footer: {

@@ -20,10 +20,7 @@ const project = {
     color: '#1890FF',
     layout: 'sidemenu',
     multipage: true,
-    colorWeak: false,
-    fixedHeader: false,
-    fixSiderbar: false,
-    autoHideHeader: false,
+    fixSideMenu: false
   },
   config: {
     // 系统名称
