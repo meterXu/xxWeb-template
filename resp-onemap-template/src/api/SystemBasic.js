@@ -7,7 +7,7 @@ if (util.getQueryVariable('roleIds')) {
 const roleIds = localStorage.getItem('roleIds') ? localStorage.getItem('roleIds').split(',') : []
 // 获取分组列表
 export function getMenu(params) {
-  return postAction('/getMenu', {
+  return postAction('/menu/list', {
     appId: window.project.variable.appid,
     roleIds: roleIds
   },
@@ -15,7 +15,7 @@ export function getMenu(params) {
 }
 // 获取系统参数
 export function getSysemParam(params) {
-  return postAction('/getSysemParam', {
+  return postAction('/sysemParam/list', {
     appId: window.project.variable.appid
   },
   )

@@ -29,7 +29,7 @@ export default {
     dropdownMenuClick(command) {
       switch (command) {
       case 'exitSystem': {
-        util.logOut(this);
+        util.logOut(this,this.$project)
       }
       }
     },

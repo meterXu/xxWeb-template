@@ -22,10 +22,10 @@ let normalRoutes = [
     path: '/',
     component: Index,
     name: Index.name,
-    redirect: '/onemap_client/route',
+    redirect: '/onemap_client/map',
     children: [
       {
-        path: '/onemap_client/route',
+        path: '/onemap_client/map',
         name: routeIndex.name,
         component: routeIndex
       }]
@@ -41,25 +41,6 @@ const createRouter = () =>
   });
 
 const router = createRouter();
-
-router.beforeEach((to, from, next) => {
-  // 渲染系统参数配置
-  getSysemParam().then(({ data }) => {
-    if (data.length) {
-      let systemParam = {}
-      data.map(item => {
-        systemParam[item.paramCode] = item.paramValue
-      })
-      Object.assign(Vue.prototype.$project.config, systemParam)
-    }
-    next()
-  }).catch(() => {
-    next()
-  })
-  // ...
-  // 返回 false 以取消导航
-  // return false
-})
 export function resetRouter() {
   const newRouter = createRouter();
   router.matcher = newRouter.matcher;

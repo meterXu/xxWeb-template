@@ -1,18 +1,18 @@
 window.project={
-  "namespace": "{{namespace}}",
+  "namespace": "onemap_client",
   "mainSys": true,
   "index": 10,
   "variable": {
-    "appid": "{{appid}}",
+    "appid": "d31d02acdd65d82548d0b797ca9cedc0",
     "datawayUrl": "http://58.210.9.133/iplatform/rsep-onemap-service/api/v1/",
-    "appName": "{{appName}}",
+    "appName": "徐州一张图",
     "tokenKey": "Authorization",
     "baseApi": "http://58.210.9.133/iplatform/gateway/admin",
     "ssoAuth": "http://58.210.9.133/iplatform/ifp-oauth2/#/newsso/login"
   },
   "redirect": {
     "404": "/onemap_client/404",
-    "index": "/",
+    "index": "/onemap_client/map",
     "login": "/onemap_client/login"
   },
   "style": {
@@ -20,25 +20,28 @@ window.project={
     "color": "#1890FF",
     "layout": "sidemenu",
     "multipage": true,
-    "colorWeak": false,
-    "fixedHeader": false,
-    "fixSiderbar": false,
-    "autoHideHeader": false
+    "fixSideMenu": false
   },
   "config": {
-    "projectName": "{{appName}}",
+    "title": "",
     "logo": "",
-    "favicon": "static/dpark/logo_sipsd_favicon.png",
+    "favicon": "",
+    "login": {
+      "title": "",
+      "desc": ""
+    },
     "menu": {
       "mode": "router"
     },
     "head": {
       "logo": {
-        "show": true
+        "show": false
       },
       "hamburger": true,
       "title": {
-        "show": true
+        "show": false,
+        "desktop": "",
+        "mobile": ""
       },
       "breadcrumb": {
         "show": true
@@ -48,6 +51,11 @@ window.project={
       },
       "fullscreen": {
         "show": true
+      },
+      "helper": {
+        "show": false,
+        "href": "",
+        "target": "_blank"
       },
       "user": {
         "show": true,
@@ -61,6 +69,7 @@ window.project={
       }
     },
     "sideMenu": {
+      "title": "",
       "width": "200px",
       "logo": {
         "show": true
@@ -79,7 +88,34 @@ window.project={
       }
     },
     "tabs": {
+      "show": true,
       "icon": true
+    },
+    "footer": {
+      "show": false,
+      "links": [
+        {
+          "name": "帮助",
+          "href": "javascript:;",
+          "target": "_self"
+        },
+        {
+          "name": "隐私",
+          "href": "javascript:;",
+          "target": "_self"
+        },
+        {
+          "name": "条款",
+          "href": "javascript:;",
+          "target": "_self"
+        }
+      ],
+      "copyright": {
+        "content": "苏州工业园区测绘地理信息有限公司",
+        "year": "2002-2017",
+        "href": "http://www.dpark.com.cn",
+        "target": "_blank"
+      }
     },
     "browserFilter": {}
   }

@@ -1,5 +1,5 @@
 const project = {
-  namespace: '{{namespace}}',
+  namespace: 'onemap_client',
   mainSys: true,
   index: 10,
   variable: {
@@ -11,7 +11,7 @@ const project = {
     ssoAuth: process.env.VUE_APP_ssoAuth
   },
   redirect: {
-    index: '/',
+    index: '/onemap_client/map',
     login: '/onemap_client/login',
     '404': '/onemap_client/404'
   },
@@ -24,15 +24,15 @@ const project = {
   },
   config: {
     // 系统名称
-    projectName: process.env.VUE_APP_appName,
+    title: '',
     // logo路径或地址
     logo: '',
     // favicon路径或地址
-    favicon: 'static/dpark/logo_sipsd_favicon.png',
-    // login: {
-    //   title: 'rsep_onemap_client',
-    //   desc: ''
-    // },
+    favicon: '',
+    login:{
+      title:'',
+      desc:''
+    },
     menu:{
       mode:'router'
     },
@@ -40,12 +40,14 @@ const project = {
     head: {
       // 左侧logo
       logo: {
-        show: true,
+        show: false,
       },
       hamburger:true,
       // layout顶部title
       title: {
-        show: true
+        show: false,
+        desktop: '',
+        mobile: ''
       },
       // 面包屑
       breadcrumb: {
@@ -59,11 +61,11 @@ const project = {
       fullscreen: {
         show: true,
       },
-      // helper: {
-      //   show: false,
-      //   href: 'http://58.210.9.133/iplatform/geekdoc/docs/wow/wow-1delpeiiudksc',
-      //   target: '_blank'
-      // },
+      helper: {
+        show: false,
+        href: '',
+        target: '_blank'
+      },
       user: {
         show: true,
         username: true,
@@ -77,6 +79,7 @@ const project = {
     },
     // 左侧sidebar显隐
     sideMenu: {
+      title: '',
       width: '200px',
       logo: {
         show: true,
@@ -95,31 +98,32 @@ const project = {
       }
     },
     tabs: {
+      show:true,
       icon: true,
     },
-    // footer: {
-    //   show: false,
-    //   links: [{
-    //     name: '帮助',
-    //     href: 'javascript:;',
-    //     target: '_self'
-    //   }, {
-    //     name: '隐私',
-    //     href: 'javascript:;',
-    //     target: '_self'
-    //   },
-    //   {
-    //     name: '条款',
-    //     href: 'javascript:;',
-    //     target: '_self'
-    //   }],
-    //   copyright: {
-    //     content: '苏州工业园区测绘地理信息有限公司',
-    //     year: '2002-2017',
-    //     href: 'http://www.dpark.com.cn',
-    //     target: '_blank'
-    //   }
-    // },
+    footer: {
+      show: false,
+      links: [{
+        name: '帮助',
+        href: 'javascript:;',
+        target: '_self'
+      }, {
+        name: '隐私',
+        href: 'javascript:;',
+        target: '_self'
+      },
+      {
+        name: '条款',
+        href: 'javascript:;',
+        target: '_self'
+      }],
+      copyright: {
+        content: '苏州工业园区测绘地理信息有限公司',
+        year: '2002-2017',
+        href: 'http://www.dpark.com.cn',
+        target: '_blank'
+      }
+    },
     browserFilter: {}
   }
 }

@@ -30,7 +30,13 @@ export default {
 </script>
 <style lang="less" scoped>
 .main {
+  height: calc(100% + 24px);
+  width: calc(100% + 24px);
+  margin: -12px;
+}
+</style>
+<style>
+.transition-container{
   height: 100%;
-  width: 100%;
 }
 </style>
