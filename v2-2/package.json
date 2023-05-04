@@ -14,8 +14,8 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "xxweb-box": "^0.0.12.001-alpha",
-    "xxweb-utils": "^0.0.12.001-alpha",
+    "xxweb-box": "0.0.13",
+    "xxweb-utils": "0.0.13",
     "axios": "^0.18.0",
     "crypto-js": "^4.1.1",
     "element-ui": "^2.15.6",
