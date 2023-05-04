@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import {util} from '@dpark/s2-xxweb-utils'
+import {util} from 'xxweb-utils'
 
 export default {
   name:'login',

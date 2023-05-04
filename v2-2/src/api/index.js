@@ -1,4 +1,4 @@
-import {util} from '@dpark/s2-xxweb-utils'
+import {util} from 'xxweb-utils'
 import {getAction} from './manage'
 export function queryPermissionsByUser() {
   return new Promise((resolve, reject) => {

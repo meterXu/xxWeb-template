@@ -1,4 +1,4 @@
-import { request } from '@dpark/s2-xxweb-utils'
+import { request } from 'xxweb-utils'
 import {dealWithError} from '@/api/dealwithError';
 const axios = request.getService(window.project)
 const axiosSSO = request.getServiceSSO(window.project)

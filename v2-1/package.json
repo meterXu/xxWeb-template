@@ -14,9 +14,8 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@dpark/icon": "^1.0.22",
-    "xxweb-box": "^0.0.15",
-    "xxweb-utils": "^0.0.11",
+    "xxweb-box": "^0.0.12.001-alpha",
+    "xxweb-utils": "^0.0.12.001-alpha",
     "axios": "^0.18.0",
     "crypto-js": "^4.1.1",
     "element-ui": "^2.15.6",

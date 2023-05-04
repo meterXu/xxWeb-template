@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import {types,util} from '@dpark/s2-xxweb-utils';
+import {types,util} from 'xxweb-utils';
 import {queryPermissionsByUser} from '../api';
 import {mapGetters} from 'vuex';
 
