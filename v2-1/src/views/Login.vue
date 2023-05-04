@@ -4,7 +4,7 @@
 
 <script>
 import {types} from 'xxweb-utils';
-
+import {JeecgLogin} from 'xxweb-box'
 export default {
   name:'login',
   data(){
@@ -16,6 +16,9 @@ export default {
         remember:false
       }
     }
+  },
+  components:{
+    JeecgLogin
   },
   methods:{
     login(valid){
