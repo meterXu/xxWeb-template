@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "@dpark/icon": "^1.0.22",
-    "@dpark/s2-xxweb-box": "^0.0.15",
-    "@dpark/s2-xxweb-utils": "^0.0.11",
+    "s2-xxweb-box": "^0.0.15",
+    "s2-xxweb-utils": "^0.0.11",
     "axios": "^0.18.0",
     "crypto-js": "^4.1.1",
     "element-ui": "^2.15.6",

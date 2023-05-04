@@ -1,7 +1,6 @@
 # {{projectName}}
 > s2 2.x 单体项目
-
-[s2在线帮助文档](http://58.210.9.133/iplatform/pldoc)
+> 
 ## 初始化
 * 项目初始化
 ```
