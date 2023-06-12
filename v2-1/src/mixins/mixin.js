@@ -16,9 +16,10 @@ export default {
     indexMethod(index) {
       return index+1
     },
-    getList(page){
+    getList(){
     },
-    handleCurrentChange() {
+    handleCurrentChange(val) {
+      this.page.currentPage = val
       this.getList()
     },
     handleSizeChange(val) {
@@ -26,11 +27,15 @@ export default {
       this.getList()
     },
     onSearch() {
-      this.getList(1)
-    },
-    onReset() {
-      this.searchForm = {}
+      this.page.currentPage = 1
       this.getList()
     },
+    onReset() {
+      Object.keys(this.searchForm).forEach(key=>{
+        this.searchForm[key] = null
+      })
+      this.page.currentPage = 1
+      this.getList()
+    }
   }
 }
